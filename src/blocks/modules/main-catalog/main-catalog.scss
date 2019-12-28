@@ -1,0 +1,8 @@
+.main-catalog--wrapper {
+  @include container-full();
+}
+
+.main-catalog {
+  @include container();
+  padding-top: 30px;
+}

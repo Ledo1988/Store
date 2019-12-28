@@ -1,0 +1,31 @@
+.breadcrumbs {
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  li {
+    &::after {
+      content: '-';
+      margin: 0 2px;
+      color: $color_blackLight;
+    }
+
+    &:last-of-type {
+      &:after {
+        display: none;
+      }
+
+      color: $color_black;
+      font-family: $font_medium;
+    }
+  }
+
+  a {
+    color: $color_blackLight;
+  }
+
+}

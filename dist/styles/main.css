@@ -444,14 +444,14 @@ ul {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1210px;
   margin: 0 auto;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 body {
-  font-family: "MullerLight";
+  font-family: "MullerRegular";
   font-size: 14px;
   color: #000000;
 }
@@ -724,15 +724,15 @@ main.main-detailed {
 }
 
 .page-main--wrapper {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .page-main--content {
-  max-width: 1280px;
+  max-width: 1210px;
   margin: 0 auto;
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+  padding-left: 15px;
+  padding-right: 15px;
   display: flex;
   justify-content: flex-end;
   min-height: calc(100vh - 70px);
@@ -832,6 +832,48 @@ textarea {
 
 code {
   color: #f66;
+}
+
+.main-catalog--wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.main-catalog {
+  max-width: 1210px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 30px;
+}
+
+.breadcrumbs {
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.breadcrumbs li::after {
+  content: '-';
+  margin: 0 2px;
+  color: #3D3D3D;
+}
+
+.breadcrumbs li:last-of-type {
+  color: #000000;
+  font-family: "MullerMedium";
+}
+
+.breadcrumbs li:last-of-type:after {
+  display: none;
+}
+
+.breadcrumbs a {
+  color: #3D3D3D;
 }
 
 @media screen and (min-width: 36rem) {
