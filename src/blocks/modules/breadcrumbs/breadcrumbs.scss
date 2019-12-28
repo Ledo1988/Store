@@ -8,6 +8,8 @@
   align-items: center;
 
   li {
+    line-height: 1;
+
     &::after {
       content: '-';
       margin: 0 2px;
@@ -26,6 +28,7 @@
 
   a {
     color: $color_blackLight;
+    line-height: 1;
   }
 
 }

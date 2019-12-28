@@ -1,0 +1,20 @@
+#catalog-filter
+	.catalog-filter--content
+		a.catalog-filter__close-link(@click="expandAll" href='javascript:void(0);')
+			span Свернуть всё
+		.catalog-filter__multiline
+			Accordion(title="цена" @expand="expandAll")
+				p Stuff 1
+			Accordion(title="тип продукции" @expand="expandAll")
+				p Stuff 2
+			Accordion(title="бренд" @expand="expandAll")
+				p Stuff 3
+			Accordion(title="цвет" @expand="expandAll")
+				p Stuff 3
+			Accordion(title="материал" @expand="expandAll")
+				p Stuff 3
+		.catalog-filter__btns
+			button(type="submit" class='btn-purple catalog-filter__show-link')
+				span показать товары
+			button(type="reset" class='catalog-filter__reset-link') сбросить фильтр
+

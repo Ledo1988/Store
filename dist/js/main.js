@@ -155,10 +155,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/blocks/modules/test/test.js":
-/*!*****************************************!*\
-  !*** ./src/blocks/modules/test/test.js ***!
-  \*****************************************/
+/***/ "./src/blocks/modules/catalog-filter/catalog-filter.js":
+/*!*************************************************************!*\
+  !*** ./src/blocks/modules/catalog-filter/catalog-filter.js ***!
+  \*************************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -166,10 +166,36 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 
-var app = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
-  el: '.app',
-  data: {
-    message: 'Привет, Vue!'
+var Accordion = vue__WEBPACK_IMPORTED_MODULE_0__["default"].component("Accordion", {
+  props: ["title", "expandAll"],
+  data: function data() {
+    return {
+      expanded: false
+    };
+  },
+  methods: {
+    toggleCardState: function toggleCardState() {
+      this.expanded = !this.expanded;
+    },
+    closeAll: function closeAll() {
+      this.expanded = false;
+    }
+  },
+  created: function created() {
+    EventBus.$on("closeAll", this.closeAll);
+  },
+  template: "\n    <div class=\"catalog-filter__item--wrapper\">\n      <div class=\"catalog-filter__item\" :class=\"{ 'not-expanded': !this.expanded }\">\n\n        <div class=\"catalog-filter__item-header\" @click=\"toggleCardState\">\n          <div class=\"catalog-filter__item-title\">\n            {{title}}\n          </div>\n          <div class=\"catalog-filter__item-icon\">\n            <span class=\"icon\">\n              <img src=\"img/sprites/sprite.svg#ico_to-top-purple\" width=\"12\" height=\"7\" alt=\"\u0421\u0442\u0440\u0435\u043B\u043A\u0430\">\n            </span>\n          </div>\n        </div>\n\n        <div class=\"catalog-filter__item-content\">\n          <div class=\"content\">\n            <slot></slot>\n          </div>\n        </div>\n\n      </div>\n    </div>\n  "
+});
+var EventBus = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]();
+var App = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
+  el: "#catalog-filter",
+  components: {
+    Accordion: Accordion
+  },
+  methods: {
+    expandAll: function expandAll() {
+      EventBus.$emit("closeAll");
+    }
   }
 });
 
@@ -195,7 +221,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_test_test__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/test/test */ "./src/blocks/modules/test/test.js");
+/* harmony import */ var _modules_catalog_filter_catalog_filter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/catalog-filter/catalog-filter */ "./src/blocks/modules/catalog-filter/catalog-filter.js");
 
 
 /***/ }),
@@ -209,9 +235,12 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _import_modules__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./import/modules */ "./src/js/import/modules.js");
-/* harmony import */ var _import_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./import/components */ "./src/js/import/components.js");
-/* harmony import */ var _import_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_import_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var _import_modules__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./import/modules */ "./src/js/import/modules.js");
+/* harmony import */ var _import_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./import/components */ "./src/js/import/components.js");
+/* harmony import */ var _import_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_import_components__WEBPACK_IMPORTED_MODULE_2__);
+
+window.Vue = vue__WEBPACK_IMPORTED_MODULE_0__["default"];
 
 
 

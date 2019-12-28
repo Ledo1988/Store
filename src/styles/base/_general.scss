@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    line-height: 1;
 }
 
 h1, h2, h3, h4, h5, h6, ul {
@@ -37,9 +38,8 @@ ul {
 
 p {
     font-size: 14px;
-    line-height: 24px;
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 img {
@@ -49,9 +49,12 @@ img {
 }
 
 h1 {
-    font-family: $font_bold;
-    font-size: 35px;
-    margin-bottom: 10px;
+    font-family: $font_extraBold;
+    font-size: 28px;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    color: #232323;
+    margin-bottom: 20px;
 }
 
 input[type="submit"],
@@ -72,6 +75,11 @@ button {
     -moz-user-select: none;
     -ms-user-select: none;
     cursor: pointer;
+
+    &:hover, &:focus {
+        border: none;
+        outline: none;
+    }
 }
 
 input::-moz-focus-inner,
@@ -103,16 +111,16 @@ input:-webkit-autofill  {
 }
 
 .btn-purple {
-    padding: 25px;
+    padding: 13px;
     text-align: center;
     width: 100%;
-    font-size: 24px;
+    font-size: 10px;
     font-family: $font_bold;
-    letter-spacing: 0.03em;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     color: #FFFFFF;
-    background: $color_purpleLight;
-    border-radius: 2px;
+    background: #A591CE;
+    border-radius:2px;
     transition: $transition;
     outline: none;
     border: none;
@@ -121,7 +129,6 @@ input:-webkit-autofill  {
         border: none;
         outline: none;
         box-shadow: none;
-        background-color: rgba(255,113,38,0.8);
     }
 
     &.disabled {

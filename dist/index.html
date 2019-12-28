@@ -15,17 +15,57 @@
     <main>
       <div class="main-catalog--wrapper">
         <div class="main-catalog">
-          <div class="main-catalog__sub-menu">
+          <div class="main-catalog__sub-menu sub-menu">
             <ul class="breadcrumbs">
               <li><a href="javascript:void(0);">Главная</a></li>
               <li><a href="javascript:void(0);">Каталог</a></li>
               <li>Футболки</li>
             </ul>
+            <h1>Каталог</h1>
+            <div class="sub-menu__choice">
+              <div class="sub-menu__choice-main choice-main"><span class="choice-main__title">Футболки</span><span class="choice-main__amount">12</span></div>
+              <ul class="sub-menu__choice-others choice-others">
+                <li><a href="javascript:void(0);"><span class="choice-others__title">футболки поло</span><span class="choice-others__amount">8</span></a></li>
+                <li><a href="javascript:void(0);"><span class="choice-others__title">пледы</span><span class="choice-others__amount">32</span></a></li>
+                <li><a href="javascript:void(0);"><span class="choice-others__title">толстовки</span><span class="choice-others__amount">9</span></a></li>
+                <li><a href="javascript:void(0);"><span class="choice-others__title">жилеты</span><span class="choice-others__amount">6</span></a></li>
+                <li><a href="javascript:void(0);"><span class="choice-others__title">сумки</span><span class="choice-others__amount">44</span></a></li>
+                <li><a href="javascript:void(0);"><span class="choice-others__title">куртки</span><span class="choice-others__amount">5</span></a></li>
+                <li><a href="javascript:void(0);"><span class="choice-others__title">кепки</span><span class="choice-others__amount">89</span></a></li>
+              </ul>
+            </div>
+            <div id="catalog-filter">
+              <div class="catalog-filter--content"><a class="catalog-filter__close-link" @click="expandAll" href="javascript:void(0);"><span>Свернуть всё</span></a>
+                <div class="catalog-filter__multiline">
+                  <Accordion title="цена" @expand="expandAll">
+                    <p>Stuff 1</p>
+                  </Accordion>
+                  <Accordion title="тип продукции" @expand="expandAll">
+                    <p>Stuff 2</p>
+                  </Accordion>
+                  <Accordion title="бренд" @expand="expandAll">
+                    <p>Stuff 3</p>
+                  </Accordion>
+                  <Accordion title="цвет" @expand="expandAll">
+                    <p>Stuff 3</p>
+                  </Accordion>
+                  <Accordion title="материал" @expand="expandAll">
+                    <p>Stuff 3</p>
+                  </Accordion>
+                </div>
+                <div class="catalog-filter__btns">
+                  <button class="btn-purple catalog-filter__show-link" type="submit"><span>показать товары</span></button>
+                  <button class="catalog-filter__reset-link" type="reset">сбросить фильтр</button>
+                </div>
+              </div>
+            </div>
+            <div class="sub-menu__short-comment">
+              <p>Описание категории, где рассказано о том, что показывается в данной категории, какие товары, их особенности, еще какие-то вещи, которые могут помочь пользователю, потенциальному покупателю выбрать себе товар по лучшей цене с лучшими характеристиками.</p>
+            </div>
           </div>
           <div class="main-catalog__items"></div>
         </div>
       </div>
-      <div class="app">{{ message }}</div>
     </main>
     <script src="../js/main.js"></script>
     <script src="../js/vendor.js"></script>

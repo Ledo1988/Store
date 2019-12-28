@@ -1,6 +1,10 @@
 const path = require("path");
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+var webpack = require('webpack')
 
 module.exports = {
+    mode: 'production',
+
     entry: {
         main: "./src/js/index.js",
     },
@@ -41,6 +45,10 @@ module.exports = {
             {
                 test: /\.svg$/,
                 loader: 'gulp-svg-sprite'
+            },
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader'
             }
         ]
     },
@@ -51,5 +59,12 @@ module.exports = {
             "%components%": path.resolve(__dirname, "src/blocks/components"),
             'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' для webpack 1
         }
-    }
+    },
+    plugins: [
+        // make sure to include the plugin!
+        new VueLoaderPlugin(),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        })
+    ]
 };

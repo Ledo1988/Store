@@ -430,6 +430,7 @@ template {
 
 * {
   box-sizing: border-box;
+  line-height: 1;
 }
 
 h1,
@@ -472,9 +473,8 @@ ul {
 
 p {
   font-size: 14px;
-  line-height: 24px;
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 img {
@@ -484,9 +484,12 @@ img {
 }
 
 h1 {
-  font-family: "Montserrat-Bold";
-  font-size: 35px;
-  margin-bottom: 10px;
+  font-family: "MullerExtraBold";
+  font-size: 28px;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  color: #232323;
+  margin-bottom: 20px;
 }
 
 input[type="submit"],
@@ -509,6 +512,18 @@ button {
   -moz-user-select: none;
   -ms-user-select: none;
   cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+button:hover,
+button:focus {
+  border: none;
+  outline: none;
 }
 
 input::-moz-focus-inner,
@@ -541,12 +556,12 @@ input:-webkit-autofill {
 }
 
 .btn-purple {
-  padding: 25px;
+  padding: 13px;
   text-align: center;
   width: 100%;
-  font-size: 24px;
-  font-family: "Montserrat-Bold";
-  letter-spacing: 0.03em;
+  font-size: 10px;
+  font-family: "MullerBold";
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   color: #FFFFFF;
   background: #A591CE;
@@ -561,7 +576,6 @@ input:-webkit-autofill {
   border: none;
   outline: none;
   box-shadow: none;
-  background-color: rgba(255, 113, 38, 0.8);
 }
 
 .btn-purple.disabled {
@@ -676,7 +690,7 @@ input:-webkit-autofill {
 
 .request-container__title {
   font-size: 22px;
-  font-family: "Montserrat-Bold";
+  font-family: "MullerBold";
   flex-shrink: 0;
 }
 
@@ -800,40 +814,6 @@ main.main-detailed {
   display: none;
 }
 
-html,
-body,
-#editor {
-  margin: 0;
-  height: 100%;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: #333;
-}
-
-textarea,
-#editor div {
-  display: inline-block;
-  width: 49%;
-  height: 100%;
-  vertical-align: top;
-  box-sizing: border-box;
-  padding: 0 20px;
-}
-
-textarea {
-  border: none;
-  border-right: 1px solid #ccc;
-  resize: none;
-  outline: none;
-  background-color: #f6f6f6;
-  font-size: 14px;
-  font-family: 'Monaco', courier, monospace;
-  padding: 20px;
-}
-
-code {
-  color: #f66;
-}
-
 .main-catalog--wrapper {
   padding-left: 15px;
   padding-right: 15px;
@@ -845,6 +825,26 @@ code {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 30px;
+  display: flex;
+}
+
+.main-catalog .sub-menu {
+  width: calc((100% - 20px*3)/4);
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+.sub-menu__short-comment {
+  font-size: 12px;
+  font-family: "MullerLight";
+  line-height: 22px;
+}
+
+.sub-menu__short-comment p {
+  font-size: 12px;
+  font-family: "MullerLight";
+  line-height: 22px;
+  margin-bottom: 5px;
 }
 
 .breadcrumbs {
@@ -855,6 +855,10 @@ code {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+.breadcrumbs li {
+  line-height: 1;
 }
 
 .breadcrumbs li::after {
@@ -874,6 +878,207 @@ code {
 
 .breadcrumbs a {
   color: #3D3D3D;
+  line-height: 1;
+}
+
+.sub-menu__choice .choice-main {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sub-menu__choice .choice-main__title {
+  font-size: 16px;
+  font-family: "MullerExtraBold";
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #232323;
+}
+
+.sub-menu__choice .choice-main__amount {
+  font-size: 10px;
+  font-family: "MullerMedium";
+  letter-spacing: 0.85px;
+  color: #4A4A4A;
+  background: #F6F6F6;
+  border-radius: 9px;
+  padding: 3px 12px;
+  margin-left: 5px;
+}
+
+.sub-menu__choice .choice-others {
+  background: #FFFFFF;
+  border: 1px solid #F1F1F1;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 17px 30px 18px 30px;
+  margin-bottom: 15px;
+}
+
+.sub-menu__choice .choice-others__title {
+  font-family: "MullerBold";
+}
+
+.sub-menu__choice .choice-others__amount {
+  font-family: "MullerRegular";
+  margin-left: 3px;
+}
+
+.sub-menu__choice .choice-others li {
+  display: block;
+  margin-bottom: 22px;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.sub-menu__choice .choice-others li a {
+  color: #4A4A4A;
+}
+
+.sub-menu__choice .choice-others li:last-of-type {
+  margin-bottom: 0;
+}
+
+.catalog-filter__close-link {
+  font-size: 9px;
+  font-family: "MullerMedium";
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.catalog-filter__close-link::after {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 5px;
+  margin-left: 3px;
+  background-image: url("/img/sprites/sprite.svg#ico_to-top-black");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.catalog-filter__multiline {
+  background: #FFFFFF;
+  border: 1px solid #F1F1F1;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.catalog-filter__item {
+  width: 100%;
+  transition: all .2s ease-in-out;
+}
+
+.catalog-filter__item--wrapper {
+  margin-bottom: 10px;
+}
+
+.catalog-filter__item--wrapper:last-of-type {
+  margin-bottom: 0;
+}
+
+.catalog-filter__item-title {
+  font-family: "MullerBold";
+  font-size: 12px;
+  letter-spacing: 0.85px;
+  text-transform: uppercase;
+}
+
+.catalog-filter__item-header {
+  cursor: pointer;
+  padding: 12px 20px 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2px;
+  background-color: #F5F1FD;
+}
+
+.catalog-filter__item-header .icon {
+  transform: rotate(180deg);
+  transition: transform 150ms ease-out;
+}
+
+.catalog-filter__item-header .icon img {
+  width: 12px;
+}
+
+.catalog-filter__item-content {
+  transition: all .1s ease-in-out;
+}
+
+.catalog-filter__item.not-expanded .catalog-filter__item-header .icon {
+  transform: rotate(0deg);
+}
+
+.catalog-filter__item.not-expanded .catalog-filter__item-content {
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 0;
+  height: 0;
+  padding: 0;
+}
+
+.catalog-filter__btns {
+  margin-bottom: 30px;
+}
+
+.catalog-filter__show-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 0;
+  background-color: transparent;
+  margin-bottom: 5px;
+}
+
+.catalog-filter__show-link span {
+  flex-grow: 1;
+  background: #A591CE;
+  border-radius: 0px 2px 2px 0px;
+  padding: 16px 14px 12px 14px;
+}
+
+.catalog-filter__show-link::before {
+  content: '';
+  display: block;
+  background: #A591CE;
+  border-radius: 2px 0px 0px 2px;
+  width: 38px;
+  height: 38px;
+  margin-right: 3px;
+}
+
+.catalog-filter__show-link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("/img/sprites/sprite.svg#ico_to-right-white");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  width: 38px;
+  height: 38px;
+}
+
+.catalog-filter__reset-link {
+  font-size: 10px;
+  font-family: "MullerMedium";
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 16px 14px 12px 57px;
+  width: 100%;
 }
 
 @media screen and (min-width: 36rem) {

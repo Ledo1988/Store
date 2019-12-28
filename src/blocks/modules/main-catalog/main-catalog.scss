@@ -5,4 +5,11 @@
 .main-catalog {
   @include container();
   padding-top: 30px;
+  display: flex;
+
+  .sub-menu {
+    width: calc((100% - 20px*3)/4);
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
 }

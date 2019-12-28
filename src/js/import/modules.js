@@ -1,1 +1,1 @@
-import "%modules%/test/test";
+import "%modules%/catalog-filter/catalog-filter";
