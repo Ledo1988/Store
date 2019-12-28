@@ -4,15 +4,19 @@
 			span Свернуть всё
 		.catalog-filter__multiline
 			Accordion(title="цена" @expand="expandAll")
-				p Stuff 1
+				p dhddh
 			Accordion(title="тип продукции" @expand="expandAll")
-				p Stuff 2
+				- var catalogChoice = 'type'
+				include ../../components/catalog-filter/__item-choice/catalog-filter__item-choice
 			Accordion(title="бренд" @expand="expandAll")
-				p Stuff 3
+				- var catalogChoice = 'brand'
+				include ../../components/catalog-filter/__item-choice/catalog-filter__item-choice
 			Accordion(title="цвет" @expand="expandAll")
-				p Stuff 3
+				- var catalogChoice = 'color'
+				include ../../components/catalog-filter/__item-choice/catalog-filter__item-choice
 			Accordion(title="материал" @expand="expandAll")
-				p Stuff 3
+				- var catalogChoice = 'material'
+				include ../../components/catalog-filter/__item-choice/catalog-filter__item-choice
 		.catalog-filter__btns
 			button(type="submit" class='btn-purple catalog-filter__show-link')
 				span показать товары

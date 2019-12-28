@@ -587,6 +587,11 @@ input:-webkit-autofill {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
+.checkbox-wrapper:last-of-type {
+  margin-bottom: 0;
 }
 
 .checkbox-wrapper input {
@@ -598,8 +603,7 @@ input:-webkit-autofill {
 }
 
 .checkbox-wrapper input:checked ~ label::before {
-  background-color: #A591CE;
-  border-color: transparent;
+  border: 1px solid #654A9D;
 }
 
 .checkbox-wrapper input:checked ~ label::after {
@@ -611,7 +615,9 @@ input:-webkit-autofill {
   align-items: center;
   justify-content: flex-start;
   font-family: "MullerMedium";
-  font-size: 20px;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
   position: relative;
   cursor: pointer;
   -webkit-touch-callout: none;
@@ -629,13 +635,13 @@ input:-webkit-autofill {
 
 .checkbox-wrapper label:before {
   content: '';
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background: #FFFFFF;
-  border: 1px solid #DADADA;
+  border: 1px solid #BCBCBC;
   box-sizing: border-box;
-  border-radius: 2px;
-  margin-right: 18px;
+  border-radius: 1px;
+  margin-right: 10px;
   transition: 0.2s ease-in-out;
   flex-shrink: 0;
 }
@@ -643,14 +649,14 @@ input:-webkit-autofill {
 .checkbox-wrapper label::after {
   content: '';
   position: absolute;
-  left: 5px;
-  top: 7px;
-  background-image: url("/img/ico/ico_tick.svg");
+  left: 0;
+  top: 0;
+  background-image: url("/img/sprites/sprite.svg#ico_tick");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 12px;
   width: 20px;
-  height: 16px;
+  height: 20px;
   transition: 0.2s ease-in-out;
   opacity: 0;
 }
@@ -814,6 +820,14 @@ main.main-detailed {
   display: none;
 }
 
+.catalog-filter__item-choice {
+  padding: 20px 30px;
+}
+
+.catalog-filter__item-choice .checkbox-wrapper {
+  label: 100%;
+}
+
 .main-catalog--wrapper {
   padding-left: 15px;
   padding-right: 15px;
@@ -974,6 +988,7 @@ main.main-detailed {
 .catalog-filter__item {
   width: 100%;
   transition: all .2s ease-in-out;
+  overflow: hidden;
 }
 
 .catalog-filter__item--wrapper {

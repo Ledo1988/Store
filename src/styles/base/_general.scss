@@ -138,11 +138,15 @@ input:-webkit-autofill  {
 }
 
 
-
 .checkbox-wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: 15px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
 
     input {
         position: absolute;
@@ -153,8 +157,7 @@ input:-webkit-autofill  {
 
         &:checked {
             ~ label::before {
-                background-color: $color_purpleLight;
-                border-color: transparent;
+                border: 1px solid #654A9D;
             }
 
             ~ label::after {
@@ -168,7 +171,9 @@ input:-webkit-autofill  {
         align-items: center;
         justify-content: flex-start;
         font-family: $font_medium;
-        font-size: 20px;
+        font-size: 9px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
         position: relative;
         cursor: pointer;
         -webkit-touch-callout: none; /* iOS Safari */
@@ -180,13 +185,13 @@ input:-webkit-autofill  {
 
         &:before {
             content: '';
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             background: #FFFFFF;
-            border: 1px solid #DADADA;
+            border: 1px solid #BCBCBC;
             box-sizing: border-box;
-            border-radius: 2px;
-            margin-right: 18px;
+            border-radius: 1px;
+            margin-right: 10px;
             transition: $transition;
             flex-shrink: 0;
         }
@@ -194,11 +199,11 @@ input:-webkit-autofill  {
         &::after {
             content: '';
             position: absolute;
-            left: 5px;
-            top: 7px;
-            @include background('/img/ico/ico_tick.svg', center, no-repeat, contain);
+            left: 0;
+            top: 0;
+            @include background('/img/sprites/sprite.svg#ico_tick', center, no-repeat, 12px);
             width: 20px;
-            height: 16px;
+            height: 20px;
             transition: $transition;
             opacity: 0;
         }

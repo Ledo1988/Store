@@ -28,6 +28,7 @@
 .catalog-filter__item {
   width: 100%;
   transition: all .2s ease-in-out;
+  overflow: hidden;
 
   &--wrapper {
     margin-bottom: 10px;
