@@ -44,7 +44,8 @@ module.exports = {
     resolve: {
         alias: {
             "%modules%": path.resolve(__dirname, "src/blocks/modules"),
-            "%components%": path.resolve(__dirname, "src/blocks/components")
+            "%components%": path.resolve(__dirname, "src/blocks/components"),
+            'vue$': 'vue/dist/vue.esm.js' // 'vue/dist/vue.common.js' для webpack 1
         }
     }
 };
