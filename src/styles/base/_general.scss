@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
     padding: 0;
@@ -10,3 +14,340 @@ h1, h2, h3, h4, h5, h6, ul {
     @include lg(max-width, rem(930));
     @include xl(max-width, rem(1110));
 }
+
+body {
+    font-family: $font_main;
+    font-size: 14px;
+    color: $color_black;
+}
+
+a {
+    color: $color_black;
+    display: inline-block;
+    text-decoration: none;
+}
+
+span {
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+h1 {
+    font-family: $font_bold;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+    display: inline-block;
+    background: none;
+    border: 0;
+    color: inherit;
+    /* cursor: default; */
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: none !important; /* for input */
+    -webkit-user-select: none; /* for button */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input {
+    width: 100%;
+    font-size: 20px;
+    font-family: $font_medium;
+    padding: 28px 30px 28px 30px;
+    background: #FFFFFF;
+    border: 1px solid #DADADA;
+    border-radius: 2px;
+    transition: $transition;
+
+    &:active, &:focus, &:hover {
+        border-color: $color_black;
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+
+input:-webkit-autofill  {
+    background-color: $color_white !important;
+}
+
+.btn-purple {
+    padding: 25px;
+    text-align: center;
+    width: 100%;
+    font-size: 24px;
+    font-family: $font_bold;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: $color_purpleLight;
+    border-radius: 2px;
+    transition: $transition;
+    outline: none;
+    border: none;
+
+    &:hover, &:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+        background-color: rgba(255,113,38,0.8);
+    }
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.3;
+    }
+}
+
+
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        pointer-events: none;
+
+        &:checked {
+            ~ label::before {
+                background-color: $color_purpleLight;
+                border-color: transparent;
+            }
+
+            ~ label::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-family: $font_medium;
+        font-size: 20px;
+        position: relative;
+        cursor: pointer;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+
+        &:before {
+            content: '';
+            width: 30px;
+            height: 30px;
+            background: #FFFFFF;
+            border: 1px solid #DADADA;
+            box-sizing: border-box;
+            border-radius: 2px;
+            margin-right: 18px;
+            transition: $transition;
+            flex-shrink: 0;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 7px;
+            @include background('/img/ico/ico_tick.svg', center, no-repeat, contain);
+            width: 20px;
+            height: 16px;
+            transition: $transition;
+            opacity: 0;
+        }
+
+    }
+
+}
+
+.link-purple {
+    font-family: $font_medium;
+    font-size: 20px;
+    color: $color_purpleLight;
+    line-height: 1;
+    border-bottom: 2px solid $color_purpleLight;
+
+}
+
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+.request-container {
+    padding: 35px 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &__title {
+        font-size: 22px;
+        font-family: $font_bold;
+        flex-shrink: 0;
+    }
+
+    &__desc {
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .link-green {
+        width: 245px;
+        flex-shrink: 0;
+    }
+
+
+}
+
+.learn-more-link {
+    font-size: 16px;
+    font-family: $font_extraBold;
+    color: $color_purpleLight;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 8px;
+        @include background('/img/ico/ico_arow-right-green.png', center, no-repeat, contain);
+        margin-left: 4px;
+    }
+
+    &:hover, &:focus {
+        border: none;
+        outline: none;
+        box-shadow: none;
+
+    }
+}
+
+main.main-detailed {
+    margin-top: 70px;
+}
+
+.page-main--wrapper {
+    @include container-full();
+}
+
+.page-main--content {
+    @include container();
+    display: flex;
+    justify-content: flex-end;
+    min-height: calc(100vh - 70px);
+    padding: 0;
+    background: #fafafb;
+}
+
+.page-main {
+    width: 1120px;
+    margin-right: 0;
+    padding: 30px 80px 30px 40px;
+}
+
+.textarea--wrapper {
+    position: relative;
+    background: #FFFFFF;
+    /* stroke */
+    height: 120px;
+    border: 1px solid #DADADA;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: 550px;
+    padding: 11px 20px;
+    margin-bottom: 20px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: calc(100% - 23px);
+        left: calc(100% - 27px);
+        width: 27px;
+        height: 23px;
+        @include background('/img/ico/ico_textarea.png', center, no-repeat, contain);
+    }
+
+    .textarea-desc {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    textarea {
+
+        -webkit-appearance: none;
+        border: none;
+        overflow: auto;
+        outline: none;
+
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+
+        resize: none; /*remove the resize handle on the bottom right*/
+        font-size: 18px;
+        font-family: $font_extraBold;
+        width: 100%;
+        min-height: 60px;
+        height: auto;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+

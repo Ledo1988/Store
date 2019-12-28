@@ -1,8 +1,10 @@
 {
     "name": "gulp-pug-starter",
     "description": "Frontend development with pleasure",
+    "author": "Andrey Gorokhov",
     "repository": {
-        "type": "git"
+        "type": "git",
+        "url": "https://github.com/andreyalexeich/gulp-pug-starter.git"
     },
     "license": "MIT",
     "scripts": {
@@ -29,10 +31,8 @@
         "bem-tools-core": "bem-tools/bem-tools-core",
         "bem-tools-create": "bem-tools/bem-tools-create",
         "browser-sync": "^2.23.6",
-        "deepmerge": "^4.2.2",
         "del": "^4.1.1",
         "eslint": "~6.0.0",
-        "fibers": "^4.0.2",
         "gulp": "^4.0.0",
         "gulp-autoprefixer": "~6.1.0",
         "gulp-clean-css": "~4.2.0",
@@ -57,8 +57,6 @@
         "imagemin-webp": "^5.0.0",
         "imagemin-zopfli": "^6.0.0",
         "require-dir": "^1.2.0",
-        "sass": "^1.24.0",
-        "sass-loader": "^8.0.0",
         "stylelint": "^10.0.1",
         "stylelint-order": "^3.0.0",
         "stylelint-selector-bem-pattern": "^2.1.0",
@@ -68,7 +66,6 @@
     },
     "dependencies": {
         "smart-grid": "^2.1.2",
-        "vue": "^2.6.11",
-        "vuetify": "^2.1.15"
+        "vue": "^2.6.11"
     }
 }
