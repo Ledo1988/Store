@@ -15,135 +15,167 @@
     <main>
       <div class="main-catalog--wrapper">
         <div class="main-catalog">
-          <div class="main-catalog__sub-menu sub-menu">
+          <div class="main-catalog__header">
             <ul class="breadcrumbs">
               <li><a href="javascript:void(0);">Главная</a></li>
               <li><a href="javascript:void(0);">Каталог</a></li>
               <li>Футболки</li>
             </ul>
-            <h1>Каталог</h1>
-            <div class="sub-menu__choice">
-              <div class="sub-menu__choice-main choice-main"><span class="choice-main__title">Футболки</span><span class="choice-main__amount">12</span></div>
-              <ul class="sub-menu__choice-others choice-others">
-                <li><a href="javascript:void(0);"><span class="choice-others__title">футболки поло</span><span class="choice-others__amount">8</span></a></li>
-                <li><a href="javascript:void(0);"><span class="choice-others__title">пледы</span><span class="choice-others__amount">32</span></a></li>
-                <li><a href="javascript:void(0);"><span class="choice-others__title">толстовки</span><span class="choice-others__amount">9</span></a></li>
-                <li><a href="javascript:void(0);"><span class="choice-others__title">жилеты</span><span class="choice-others__amount">6</span></a></li>
-                <li><a href="javascript:void(0);"><span class="choice-others__title">сумки</span><span class="choice-others__amount">44</span></a></li>
-                <li><a href="javascript:void(0);"><span class="choice-others__title">куртки</span><span class="choice-others__amount">5</span></a></li>
-                <li><a href="javascript:void(0);"><span class="choice-others__title">кепки</span><span class="choice-others__amount">89</span></a></li>
-              </ul>
+            <div class="main-catalog__header-title">
+              <h1>Каталог</h1>
+              <div class="main-catalog__header-choice header-choice"><span class="header-choice__title">Футболки</span><span class="header-choice__amount">12</span></div>
             </div>
-            <div id="catalog-filter">
-              <div class="catalog-filter--content"><a class="catalog-filter__close-link" @click="expandAll" href="javascript:void(0);"><span>Свернуть всё</span></a>
-                <div class="catalog-filter__multiline">
-                  <Accordion title="цена" @expand="expandAll">
-                    <div class="catalog-filter__item-choice">
-                      <div id="catalog-filter__slider"></div>
-                      <div class="choice-amount-number--wrapper">
-                        <div class="checkbox-wrapper">
-                          <input type="checkbox" id="choice-amount" name="choice-amount" value="">
-                          <label for="choice-amount"><span>в наличии от</span></label>
-                        </div>
-                        <div class="choice-amount-number">
-                          <input type="number" id="choice-amount-number" name="choice-amount-number" value="">
-                          <label for="choice-amount-number"><span>шт.</span></label>
-                        </div>
-                      </div>
-                    </div>
-                  </Accordion>
-                  <Accordion title="тип продукции" @expand="expandAll">
-                    <div class="catalog-filter__item-choice">
-                      <div class="checkbox-wrapper">
-                        <input type="checkbox" id="choice-man" name="choice-man" value=""/>
-                        <label for="choice-man"><span>мужская</span></label>
-                      </div>
-                      <div class="checkbox-wrapper">
-                        <input type="checkbox" id="choice-woman" name="choice-woman" value=""/>
-                        <label for="choice-woman"><span>женская</span></label>
-                      </div>
-                      <div class="checkbox-wrapper">
-                        <input type="checkbox" id="choice-kids" name="choice-kids" value=""/>
-                        <label for="choice-kids"><span>детская</span></label>
-                      </div>
-                    </div>
-                  </Accordion>
-                  <Accordion title="бренд" @expand="expandAll">
-                    <div class="catalog-filter__item-choice">
-                      <div class="checkbox-wrapper">
-                        <input type="checkbox" id="choice-Portobello" name="choice-Portobello" value=""/>
-                        <label for="choice-Portobello"><span>Portobello</span></label>
-                      </div>
-                      <div class="checkbox-wrapper">
-                        <input type="checkbox" id="choice-Parker" name="choice-Parker" value=""/>
-                        <label for="choice-Parker"><span>Parker</span></label>
-                      </div>
-                      <div class="checkbox-wrapper">
-                        <input type="checkbox" id="choice-Waterman" name="choice-Waterman" value=""/>
-                        <label for="choice-Waterman"><span>Waterman</span></label>
-                      </div>
-                    </div>
-                  </Accordion>
-                  <Accordion title="цвет" @expand="expandAll">
-                    <div class="catalog-filter__item-choice">
-                      <div class="checkbox-wrapper">
-                        <input type="checkbox" id="color-red" name="color-red" value=""/>
-                        <label for="color-red"><span class="color color-red">красный</span></label>
-                      </div>
-                      <div class="checkbox-wrapper">
-                        <input type="checkbox" id="color-green" name="color-green" value=""/>
-                        <label for="color-green"><span class="color color-green">зеленый</span></label>
-                      </div>
-                      <div class="checkbox-wrapper">
-                        <input type="checkbox" id="color-blue" name="color-blue" value=""/>
-                        <label for="color-blue"><span class="color color-blue">синий</span></label>
-                      </div>
-                      <div class="checkbox-wrapper">
-                        <input type="checkbox" id="color-black" name="color-black" value=""/>
-                        <label for="color-black"><span class="color color-black">черный</span></label>
-                      </div>
-                      <div class="checkbox-wrapper">
-                        <input type="checkbox" id="color-white" name="color-white" value=""/>
-                        <label for="color-white"><span class="color color-white">белый</span></label>
-                      </div>
-                    </div>
-                  </Accordion>
-                  <Accordion title="материал" @expand="expandAll">
-                    <div class="catalog-filter__item-choice">
-                      <div class="checkbox-wrapper">
-                        <input type="checkbox" id="choice-material-acrylic" name="choice-Portobello" value=""/>
-                        <label for="choice-material-acrylic"><span>акрил</span></label>
-                      </div>
-                      <div class="checkbox-wrapper">
-                        <input type="checkbox" id="choice-material-acrylic-100" name="choice-material-acrylic-100" value=""/>
-                        <label for="choice-material-acrylic-100"><span>акрил 100%</span></label>
-                      </div>
-                      <div class="checkbox-wrapper">
-                        <input type="checkbox" id="choice-material-acrylic-50" name="choice-material-acrylic-50" value=""/>
-                        <label for="choice-material-acrylic-50"><span>акрил 50%</span></label>
-                      </div>
-                      <div class="checkbox-wrapper">
-                        <input type="checkbox" id="choice-material-acrylic-viscose" name="choice-material-acrylic-viscose" value=""/>
-                        <label for="choice-material-acrylic-viscose"><span>вискоза</span></label>
-                      </div>
-                      <div class="checkbox-wrapper">
-                        <input type="checkbox" id="choice-material-Jersey" name="choice-material-Jersey" value=""/>
-                        <label for="choice-material-Jersey"><span>джерси</span></label>
-                      </div>
-                    </div>
-                  </Accordion>
-                </div>
-                <div class="catalog-filter__btns">
-                  <button class="btn-purple catalog-filter__show-link" type="submit"><span>показать товары</span></button>
-                  <button class="catalog-filter__reset-link" type="reset">сбросить фильтр</button>
+            <div class="main-catalog__header-section">
+              <div class="main-catalog__items-types">
+                <div class="items-types">
+                  <div class="items-types__title">виды нанесения:</div>
+                  <ul class="items-types__list">
+                    <li><a href="javascript:void(0);">вышивка</a></li>
+                    <li><a href="javascript:void(0);">полноцвет</a></li>
+                    <li><a href="javascript:void(0);">водынми черниалми</a></li>
+                    <li><a href="javascript:void(0);">флекс</a></li>
+                    <li><a href="javascript:void(0);">шелкография</a></li>
+                  </ul>
                 </div>
               </div>
             </div>
-            <div class="sub-menu__short-comment">
-              <p>Описание категории, где рассказано о том, что показывается в данной категории, какие товары, их особенности, еще какие-то вещи, которые могут помочь пользователю, потенциальному покупателю выбрать себе товар по лучшей цене с лучшими характеристиками.</p>
+          </div>
+          <div class="main-catalog__content">
+            <div class="main-catalog__sub-menu sub-menu">
+              <div class="sub-menu__choice">
+                <ul class="sub-menu__choice-list choice-list">
+                  <li><a href="javascript:void(0);"><span class="choice-list__title">футболки поло</span><span class="choice-list__amount">8</span></a></li>
+                  <li><a href="javascript:void(0);"><span class="choice-others__title">пледы</span><span class="choice-others__amount">32</span></a></li>
+                  <li><a href="javascript:void(0);"><span class="choice-others__title">толстовки</span><span class="choice-others__amount">9</span></a></li>
+                  <li><a href="javascript:void(0);"><span class="choice-others__title">жилеты</span><span class="choice-others__amount">6</span></a></li>
+                  <li><a href="javascript:void(0);"><span class="choice-others__title">сумки</span><span class="choice-others__amount">44</span></a></li>
+                  <li><a href="javascript:void(0);"><span class="choice-others__title">куртки</span><span class="choice-others__amount">5</span></a></li>
+                  <li><a href="javascript:void(0);"><span class="choice-others__title">кепки</span><span class="choice-others__amount">89</span></a></li>
+                </ul>
+              </div>
+              <div id="catalog-filter">
+                <div class="catalog-filter--content"><a class="catalog-filter__close-link" @click="expandAll" href="javascript:void(0);"><span>Свернуть всё</span></a>
+                  <div class="catalog-filter__multiline">
+                    <Accordion title="цена" @expand="expandAll">
+                      <div class="catalog-filter__item-choice">
+                        <div id="catalog-filter__slider"></div>
+                        <div class="choice-amount-number--wrapper">
+                          <div class="checkbox-wrapper">
+                            <input type="checkbox" id="choice-amount" name="choice-amount" value="">
+                            <label for="choice-amount"><span>в наличии от</span></label>
+                          </div>
+                          <div class="choice-amount-number">
+                            <input type="number" id="choice-amount-number" name="choice-amount-number" value="">
+                            <label for="choice-amount-number"><span>шт.</span></label>
+                          </div>
+                        </div>
+                      </div>
+                    </Accordion>
+                    <Accordion title="тип продукции" @expand="expandAll">
+                      <div class="catalog-filter__item-choice">
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-man" name="choice-man" value=""/>
+                          <label for="choice-man"><span>мужская</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-woman" name="choice-woman" value=""/>
+                          <label for="choice-woman"><span>женская</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-kids" name="choice-kids" value=""/>
+                          <label for="choice-kids"><span>детская</span></label>
+                        </div>
+                      </div>
+                    </Accordion>
+                    <Accordion title="бренд" @expand="expandAll">
+                      <div class="catalog-filter__item-choice">
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-Portobello" name="choice-Portobello" value=""/>
+                          <label for="choice-Portobello"><span>Portobello</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-Parker" name="choice-Parker" value=""/>
+                          <label for="choice-Parker"><span>Parker</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-Waterman" name="choice-Waterman" value=""/>
+                          <label for="choice-Waterman"><span>Waterman</span></label>
+                        </div>
+                      </div>
+                    </Accordion>
+                    <Accordion title="цвет" @expand="expandAll">
+                      <div class="catalog-filter__item-choice">
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="color-red" name="color-red" value=""/>
+                          <label for="color-red"><span class="color color-red">красный</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="color-green" name="color-green" value=""/>
+                          <label for="color-green"><span class="color color-green">зеленый</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="color-blue" name="color-blue" value=""/>
+                          <label for="color-blue"><span class="color color-blue">синий</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="color-black" name="color-black" value=""/>
+                          <label for="color-black"><span class="color color-black">черный</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="color-white" name="color-white" value=""/>
+                          <label for="color-white"><span class="color color-white">белый</span></label>
+                        </div>
+                      </div>
+                    </Accordion>
+                    <Accordion title="материал" @expand="expandAll">
+                      <div class="catalog-filter__item-choice">
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-material-acrylic" name="choice-Portobello" value=""/>
+                          <label for="choice-material-acrylic"><span>акрил</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-material-acrylic-100" name="choice-material-acrylic-100" value=""/>
+                          <label for="choice-material-acrylic-100"><span>акрил 100%</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-material-acrylic-50" name="choice-material-acrylic-50" value=""/>
+                          <label for="choice-material-acrylic-50"><span>акрил 50%</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-material-acrylic-viscose" name="choice-material-acrylic-viscose" value=""/>
+                          <label for="choice-material-acrylic-viscose"><span>вискоза</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-material-Jersey" name="choice-material-Jersey" value=""/>
+                          <label for="choice-material-Jersey"><span>джерси</span></label>
+                        </div>
+                      </div>
+                    </Accordion>
+                  </div>
+                  <div class="catalog-filter__btns">
+                    <button class="btn-purple catalog-filter__show-link" type="submit"><span>показать товары</span></button>
+                    <button class="catalog-filter__reset-link" type="reset">сбросить фильтр</button>
+                  </div>
+                </div>
+              </div>
+              <div class="sub-menu__short-comment">
+                <p>Описание категории, где рассказано о том, что показывается в данной категории, какие товары, их особенности, еще какие-то вещи, которые могут помочь пользователю, потенциальному покупателю выбрать себе товар по лучшей цене с лучшими характеристиками.</p>
+              </div>
+            </div>
+            <div class="main-catalog__items">
+              <div class="main-catalog__items-sorting">
+                <div class="items-sorting">
+                  <div class="items-sorting__main"><span class="items-sorting__title">сортировать по:</span><a class="items-sorting__main-item items-sorting__main-item-rate" href="javascript:void(0);">Цена</a><a class="items-sorting__main-item" href="javascript:void(0);">артикулу</a><a class="items-sorting__main-item" href="javascript:void(0);">наименованию</a></div>
+                  <div class="items-sorting__view"><span class="items-sorting__title">вид:</span>
+                    <div id="view-sorting"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-catalog__items-container">
+                <ss></ss>
+              </div>
             </div>
           </div>
-          <div class="main-catalog__items"></div>
         </div>
       </div>
     </main>

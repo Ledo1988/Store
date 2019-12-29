@@ -14,8 +14,8 @@ gulp.task("smart-grid", (cb) => {
             container: "container"
         },
         container: {
-            fields: "15px", // side fields - 15px
-            maxWidth: '1210px', /* max-width оn very large screen */
+            fields: "10px", // side fields - 15px
+            maxWidth: '1200px', /* max-width оn very large screen */
         },
         breakPoints: {
             xs: {

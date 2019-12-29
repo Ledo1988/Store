@@ -4,6 +4,10 @@ mixin choice-others__item(title, amount)
 			span.choice-others__title=title
 			span.choice-others__amount=amount
 
+mixin list-item(name, href)
+	li
+		a(href=href)= name
+
 
 mixin img(src, width, height, title)
 	//- attributes == {class: "btn"}
@@ -24,9 +28,7 @@ mixin btn-link(href, className, count)
 	.btn
 		a(href=href class=className data-count=count)
 
-mixin list-item(name, href)
-	li
-		a(href=href)= name
+
 
 mixin list-item-img(name, src, width, height, title)
 	li

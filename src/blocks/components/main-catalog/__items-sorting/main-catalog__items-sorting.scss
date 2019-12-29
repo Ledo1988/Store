@@ -1,0 +1,38 @@
+.main-catalog__items-sorting {
+  @include catalog-main;
+  width: 100%;
+
+  .items-sorting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+      font-size: 9px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-right: 7px;
+    }
+
+    &__view {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .items-sorting__main-item {
+        margin-left: 10px;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+
+        img {
+          width: 19px;
+          height: 18px;
+        }
+
+      }
+    }
+  }
+
+}
