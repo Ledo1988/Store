@@ -1,11 +1,93 @@
 .main-catalog__items-sorting {
   @include catalog-main;
   width: 100%;
+  margin-bottom: 15px;
 
   .items-sorting {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &__main {
+      display: flex;
+      align-items: center;
+
+      > .items-sorting__title {
+        border-bottom: 1px solid transparent;
+      }
+
+      .items-sorting__rate {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .items-sorting__rate-item {
+          height: 18px;
+          width: 18px;
+          border: 1px solid #CEC9DA;
+          box-sizing: border-box;
+          border-radius: 2px;
+          background-color: #fff;
+          margin-left: 10px;
+          font-size: 0;
+          flex-shrink: 0;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          &::before {
+            content: '';
+            display: block;
+            position: relative;
+            height: 9px;
+            width: 6px;
+            @include background('/img/sprites/sprite.svg#ico_arrow-down-purple', center, no-repeat, cover);
+          }
+
+          &.items-sorting__rate-item-higher {
+            &::before {
+              transform: rotate(180deg);
+            }
+          }
+
+          &.active {
+            background: #A591CE;
+            border-color: #A591CE;
+
+            &::before {
+              background-image: url('/img/sprites/sprite.svg#ico_arrow-down-white');
+            }
+          }
+
+        }
+      }
+
+      &-item {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #4A4A4A;
+        margin-right: 15px;
+        padding: 5px 0;
+
+        .items-sorting__title {
+          border-bottom: 1px solid transparent;
+          transition: $transition;
+          margin-right: 0;
+        }
+
+        &.active {
+          font-family: $font_medium;
+
+          .items-sorting__title {
+            border-bottom: 1px solid #C5B9DF;
+          }
+
+        }
+      }
+    }
 
     &__title {
       font-size: 9px;
@@ -19,14 +101,22 @@
       justify-content: flex-end;
       align-items: center;
 
-      .items-sorting__main-item {
+      &-item {
         margin-left: 10px;
+        display: block;
+        font-size: 0;
+        opacity: 0.3;
+        transition: $transition;
+
+        &.active {
+          opacity: 1;
+        }
 
         &:first-of-type {
           margin-left: 0;
         }
 
-        img {
+        svg {
           width: 19px;
           height: 18px;
         }
