@@ -1,0 +1,148 @@
+.catalog-filter__item-choice {
+  padding: 20px 30px;
+
+  .checkbox-wrapper {
+    label {
+      width: 100%;
+    }
+
+
+
+    span.color {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &::after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        display: block;
+        flex-shrink: 0;
+
+      }
+      
+      &.color-red {
+        &::after {
+        background-color: #DC2525;}
+      }
+
+      &.color-green {
+        &::after {
+          background-color: #82C955;}
+      }
+
+      &.color-blue {
+        &::after {
+          background-color: #5585C9;}
+      }
+
+      &.color-black {
+        &::after {
+          background-color: #2B2D2F;}
+      }
+
+      &.color-white {
+        &::after {
+          background-color: #ffffff;
+        border: 1px solid #979797;}
+      }
+    }
+  }
+}
+
+#catalog-filter__slider {
+  margin-top: 17px;
+  margin-bottom: 20px;
+
+  .vue-slider-rail {
+    height: 1px;
+    background-color: $color_purpleLight;
+  }
+
+  .vue-slider-process {
+    background-color: $color_purple;
+  }
+
+  .vue-slider-dot-handle {
+    cursor: pointer;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background-color: $color_purple;
+    box-sizing: border-box;
+    box-shadow: none;
+    border: 2px solid $color_white;
+  }
+
+  .vue-slider-dot {
+    width: 19px !important;
+    height: 19px !important;
+  }
+
+  .vue-slider-dot-tooltip {
+    visibility: visible;
+    top: -5px !important;
+  }
+
+  .vue-slider-dot-tooltip-inner {
+    font-size: 10px;
+    font-family: $font_medium;
+    padding: 2px 5px;
+    text-align: center;
+    color: #000000;
+    border-color: transparent;
+    background-color: transparent;
+    box-sizing: content-box;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.choice-amount-number--wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .checkbox-wrapper {
+    margin-bottom: 0;
+  }
+
+  .choice-amount-number {
+    display: flex;
+    font-size: 9px;
+    align-items: center;
+    font-family: $font_medium;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    input {
+      width: 30px;
+      height: auto;
+      padding: 0;
+      padding-bottom: 3px;
+      margin-left: 8px;
+      margin-right: 8px;
+      margin-top: 5px;
+      border: none;
+      border-bottom: 1px solid #654A9D;
+      font-size: 9px;
+      font-family: $font_medium;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+
+}

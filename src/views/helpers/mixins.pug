@@ -61,8 +61,7 @@ mixin input__checkbox-color(idName, name, value, Title, color)
 	.checkbox-wrapper
 		input(type="checkbox" id=idName name=name value=value)
 		label(for=idName)
-			span=Title
-		span.color(class='color-' + color)
+			span.color(class='color-' + color)=Title
 
 mixin input__radio(idName, name, value, Title, checked)
 	.radio-wrapper

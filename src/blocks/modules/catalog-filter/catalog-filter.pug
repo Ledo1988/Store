@@ -4,7 +4,8 @@
 			span Свернуть всё
 		.catalog-filter__multiline
 			Accordion(title="цена" @expand="expandAll")
-				p dhddh
+				- var catalogChoice = 'rate'
+				include ../../components/catalog-filter/__item-choice/catalog-filter__item-choice
 			Accordion(title="тип продукции" @expand="expandAll")
 				- var catalogChoice = 'type'
 				include ../../components/catalog-filter/__item-choice/catalog-filter__item-choice

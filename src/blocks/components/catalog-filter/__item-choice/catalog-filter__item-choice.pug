@@ -1,0 +1,41 @@
+- var catalogChoice
+
+case catalogChoice
+	when 'rate'
+		.catalog-filter__item-choice
+			#catalog-filter__slider
+			.choice-amount-number--wrapper
+				.checkbox-wrapper
+					input(type="checkbox" id="choice-amount" name="choice-amount" value="")
+					label(for="choice-amount")
+						span в наличии от
+				.choice-amount-number
+					input(type="number" id="choice-amount-number" name="choice-amount-number" value="")
+					label(for="choice-amount-number")
+						span шт.
+
+	when 'type'
+		.catalog-filter__item-choice
+			+input__checkbox('choice-man', 'choice-man', '', 'мужская')
+			+input__checkbox('choice-woman', 'choice-woman', '', 'женская')
+			+input__checkbox('choice-kids', 'choice-kids', '', 'детская')
+	when 'brand'
+		.catalog-filter__item-choice
+			+input__checkbox('choice-Portobello', 'choice-Portobello', '', 'Portobello')
+			+input__checkbox('choice-Parker', 'choice-Parker', '', 'Parker')
+			+input__checkbox('choice-Waterman', 'choice-Waterman', '', 'Waterman')
+
+	when 'material'
+		.catalog-filter__item-choice
+			+input__checkbox('choice-material-acrylic', 'choice-Portobello', '', 'акрил')
+			+input__checkbox('choice-material-acrylic-100', 'choice-material-acrylic-100', '', 'акрил 100%')
+			+input__checkbox('choice-material-acrylic-50', 'choice-material-acrylic-50', '', 'акрил 50%')
+			+input__checkbox('choice-material-acrylic-viscose', 'choice-material-acrylic-viscose', '', 'вискоза')
+			+input__checkbox('choice-material-Jersey', 'choice-material-Jersey', '', 'джерси')
+	when 'color'
+		.catalog-filter__item-choice
+			+input__checkbox-color('color-red', 'color-red', '', 'красный', 'red')
+			+input__checkbox-color('color-green', 'color-green', '', 'зеленый', 'green')
+			+input__checkbox-color('color-blue', 'color-blue', '', 'синий', 'blue')
+			+input__checkbox-color('color-black', 'color-black', '', 'черный', 'black')
+			+input__checkbox-color('color-white', 'color-white', '', 'белый', 'white')

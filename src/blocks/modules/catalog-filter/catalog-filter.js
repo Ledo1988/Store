@@ -55,5 +55,10 @@ const App = new Vue({
         expandAll() {
             EventBus.$emit("closeAll");
         }
-    }
+    },
+
 });
+
+
+
+

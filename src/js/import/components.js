@@ -1,0 +1,1 @@
+import "%components%/catalog-filter/__item-choice/catalog-filter__item-choice";

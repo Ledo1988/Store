@@ -38,7 +38,19 @@
               <div class="catalog-filter--content"><a class="catalog-filter__close-link" @click="expandAll" href="javascript:void(0);"><span>Свернуть всё</span></a>
                 <div class="catalog-filter__multiline">
                   <Accordion title="цена" @expand="expandAll">
-                    <p>dhddh</p>
+                    <div class="catalog-filter__item-choice">
+                      <div id="catalog-filter__slider"></div>
+                      <div class="choice-amount-number--wrapper">
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-amount" name="choice-amount" value="">
+                          <label for="choice-amount"><span>в наличии от</span></label>
+                        </div>
+                        <div class="choice-amount-number">
+                          <input type="number" id="choice-amount-number" name="choice-amount-number" value="">
+                          <label for="choice-amount-number"><span>шт.</span></label>
+                        </div>
+                      </div>
+                    </div>
                   </Accordion>
                   <Accordion title="тип продукции" @expand="expandAll">
                     <div class="catalog-filter__item-choice">
@@ -76,23 +88,23 @@
                     <div class="catalog-filter__item-choice">
                       <div class="checkbox-wrapper">
                         <input type="checkbox" id="color-red" name="color-red" value=""/>
-                        <label for="color-red"><span>красный</span></label><span class="color color-red"></span>
+                        <label for="color-red"><span class="color color-red">красный</span></label>
                       </div>
                       <div class="checkbox-wrapper">
                         <input type="checkbox" id="color-green" name="color-green" value=""/>
-                        <label for="color-green"><span>зеленый</span></label><span class="color color-green"></span>
+                        <label for="color-green"><span class="color color-green">зеленый</span></label>
                       </div>
                       <div class="checkbox-wrapper">
                         <input type="checkbox" id="color-blue" name="color-blue" value=""/>
-                        <label for="color-blue"><span>синий</span></label><span class="color color-blue"></span>
+                        <label for="color-blue"><span class="color color-blue">синий</span></label>
                       </div>
                       <div class="checkbox-wrapper">
                         <input type="checkbox" id="color-black" name="color-black" value=""/>
-                        <label for="color-black"><span>черный</span></label><span class="color color-black"></span>
+                        <label for="color-black"><span class="color color-black">черный</span></label>
                       </div>
                       <div class="checkbox-wrapper">
                         <input type="checkbox" id="color-white" name="color-white" value=""/>
-                        <label for="color-white"><span>белый</span></label><span class="color color-white"></span>
+                        <label for="color-white"><span class="color color-white">белый</span></label>
                       </div>
                     </div>
                   </Accordion>
