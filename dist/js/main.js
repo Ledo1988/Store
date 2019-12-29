@@ -341,10 +341,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/blocks/components/main-catalog/__item/main-catalog__item.js":
-/*!*************************************************************************!*\
-  !*** ./src/blocks/components/main-catalog/__item/main-catalog__item.js ***!
-  \*************************************************************************/
+/***/ "./src/blocks/components/main-catalog/__item-swiper/main-catalog__item-swiper.js":
+/*!***************************************************************************************!*\
+  !*** ./src/blocks/components/main-catalog/__item-swiper/main-catalog__item-swiper.js ***!
+  \***************************************************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -355,31 +355,113 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/js/swiper.esm.bundle.js");
 
 
-var galleryThumbs = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.gallery-thumbs', {
-  spaceBetween: 0,
-  slidesPerView: 'auto',
-  direction: 'vertical',
-  loop: true,
-  freeMode: true,
-  loopedSlides: 5,
-  //looped slides should be the same
-  watchSlidesVisibility: true,
-  watchSlidesProgress: true
-});
-var galleryTop = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.gallery-top', {
-  spaceBetween: 7,
-  direction: 'vertical',
-  loop: true,
-  loopedSlides: 5,
-  //looped slides should be the same
-  thumbs: {
-    swiper: galleryThumbs
-  },
-  navigation: {
-    nextEl: '.gallery-thumbs .item-swiper-button-next',
-    prevEl: '.gallery-thumbs .item-swiper-button-prev'
-  }
-});
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  var newClassThumbs;
+  var newClassTop;
+  var newClassBtnNext;
+  var newClassBtnPrev;
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body .main-catalog__item').each(function (index, element) {
+    newClassThumbs = 'gallery-thumbs-s' + index;
+    newClassTop = 'gallery-top-s' + index;
+    newClassBtnNext = 'next-' + newClassThumbs;
+    newClassBtnPrev = 'prev-' + newClassThumbs;
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).find('.gallery-thumbs').addClass(newClassThumbs);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).find('.gallery-top').addClass(newClassTop);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).find('.item-swiper-button-next').addClass(newClassBtnNext);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).find('.item-swiper-button-prev').addClass(newClassBtnPrev);
+    newClassThumbs = '.' + newClassThumbs;
+    newClassTop = '.' + newClassTop;
+    newClassBtnNext = '.' + newClassBtnNext;
+    newClassBtnPrev = '.' + newClassBtnPrev;
+    var galleryThumbs = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](newClassThumbs, {
+      spaceBetween: 0,
+      slidesPerView: 'auto',
+      direction: 'vertical',
+      loop: true,
+      freeMode: true,
+      loopedSlides: 5,
+      //looped slides should be the same
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true
+    });
+    var galleryTop = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](newClassTop, {
+      spaceBetween: 7,
+      direction: 'vertical',
+      loop: true,
+      loopedSlides: 5,
+      //looped slides should be the same
+      thumbs: {
+        swiper: galleryThumbs
+      },
+      navigation: {
+        nextEl: newClassBtnNext,
+        prevEl: newClassBtnPrev
+      }
+    });
+  });
+}); // $('body .item__swiper--wrapper').each(function (index) {
+//     var galleryThumbs = new Swiper('.gallery-thumbs', {
+//         spaceBetween: 0,
+//         slidesPerView: 'auto',
+//         direction: 'vertical',
+//         loop: true,
+//         freeMode: true,
+//         loopedSlides: 5, //looped slides should be the same
+//         watchSlidesVisibility: true,
+//         watchSlidesProgress: true,
+//
+//     });
+//     var galleryTop = new Swiper('.gallery-top', {
+//         spaceBetween: 7,
+//         direction: 'vertical',
+//         loop:true,
+//         loopedSlides: 5, //looped slides should be the same
+//         thumbs: {
+//             swiper: galleryThumbs,
+//         },
+//         navigation: {
+//             nextEl: '.gallery-thumbs .item-swiper-button-next',
+//             prevEl: '.gallery-thumbs .item-swiper-button-prev',
+//         },
+//     });
+// });
+
+/***/ }),
+
+/***/ "./src/blocks/components/main-catalog/__item/main-catalog__item.js":
+/*!*************************************************************************!*\
+  !*** ./src/blocks/components/main-catalog/__item/main-catalog__item.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// import $ from 'jquery';
+// import Swiper from 'swiper';
+//
+// var galleryThumbs = new Swiper('.gallery-thumbs', {
+// 	spaceBetween: 0,
+// 	slidesPerView: 'auto',
+// 	direction: 'vertical',
+// 	loop: true,
+// 	freeMode: true,
+// 	loopedSlides: 5, //looped slides should be the same
+// 	watchSlidesVisibility: true,
+// 	watchSlidesProgress: true,
+//
+// });
+// var galleryTop = new Swiper('.gallery-top', {
+// 	spaceBetween: 7,
+// 	direction: 'vertical',
+// 	loop:true,
+// 	loopedSlides: 5, //looped slides should be the same
+// 	thumbs: {
+// 		swiper: galleryThumbs,
+// 	},
+// 	navigation: {
+// 		nextEl: '.gallery-thumbs .item-swiper-button-next',
+// 		prevEl: '.gallery-thumbs .item-swiper-button-prev',
+// 	},
+// });
 
 /***/ }),
 
@@ -479,6 +561,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_catalog_filter_item_choice_catalog_filter_item_choice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %components%/catalog-filter/__item-choice/catalog-filter__item-choice */ "./src/blocks/components/catalog-filter/__item-choice/catalog-filter__item-choice.js");
 /* harmony import */ var _components_main_catalog_items_sorting_main_catalog_items_sorting__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %components%/main-catalog/__items-sorting/main-catalog__items-sorting */ "./src/blocks/components/main-catalog/__items-sorting/main-catalog__items-sorting.js");
 /* harmony import */ var _components_main_catalog_item_main_catalog_item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %components%/main-catalog/__item/main-catalog__item */ "./src/blocks/components/main-catalog/__item/main-catalog__item.js");
+/* harmony import */ var _components_main_catalog_item_main_catalog_item__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_main_catalog_item_main_catalog_item__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_main_catalog_item_swiper_main_catalog_item_swiper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %components%/main-catalog/__item-swiper/main-catalog__item-swiper */ "./src/blocks/components/main-catalog/__item-swiper/main-catalog__item-swiper.js");
+
 
 
 
