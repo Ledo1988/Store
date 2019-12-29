@@ -520,36 +520,18 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
 /*!*************************************************************************!*\
   !*** ./src/blocks/components/main-catalog/__item/main-catalog__item.js ***!
   \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// import $ from 'jquery';
-// import Swiper from 'swiper';
-//
-// var galleryThumbs = new Swiper('.gallery-thumbs', {
-// 	spaceBetween: 0,
-// 	slidesPerView: 'auto',
-// 	direction: 'vertical',
-// 	loop: true,
-// 	freeMode: true,
-// 	loopedSlides: 5, //looped slides should be the same
-// 	watchSlidesVisibility: true,
-// 	watchSlidesProgress: true,
-//
-// });
-// var galleryTop = new Swiper('.gallery-top', {
-// 	spaceBetween: 7,
-// 	direction: 'vertical',
-// 	loop:true,
-// 	loopedSlides: 5, //looped slides should be the same
-// 	thumbs: {
-// 		swiper: galleryThumbs,
-// 	},
-// 	navigation: {
-// 		nextEl: '.gallery-thumbs .item-swiper-button-next',
-// 		prevEl: '.gallery-thumbs .item-swiper-button-prev',
-// 	},
-// });
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('body .main-catalog__items-container').on('click', '.main-catalog__item', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parents('.main-catalog__items-container').find('.main-catalog__item').removeClass('active');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
+});
 
 /***/ }),
 
@@ -743,7 +725,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_catalog_filter_item_choice_catalog_filter_item_choice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %components%/catalog-filter/__item-choice/catalog-filter__item-choice */ "./src/blocks/components/catalog-filter/__item-choice/catalog-filter__item-choice.js");
 /* harmony import */ var _components_main_catalog_items_sorting_main_catalog_items_sorting__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %components%/main-catalog/__items-sorting/main-catalog__items-sorting */ "./src/blocks/components/main-catalog/__items-sorting/main-catalog__items-sorting.js");
 /* harmony import */ var _components_main_catalog_item_main_catalog_item__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %components%/main-catalog/__item/main-catalog__item */ "./src/blocks/components/main-catalog/__item/main-catalog__item.js");
-/* harmony import */ var _components_main_catalog_item_main_catalog_item__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_main_catalog_item_main_catalog_item__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_main_catalog_item_swiper_main_catalog_item_swiper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %components%/main-catalog/__item-swiper/main-catalog__item-swiper */ "./src/blocks/components/main-catalog/__item-swiper/main-catalog__item-swiper.js");
 
 
@@ -777,8 +758,19 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _import_modules__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./import/modules */ "./src/js/import/modules.js");
-/* harmony import */ var _import_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./import/components */ "./src/js/import/components.js");
+/* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/stable */ "./node_modules/core-js/stable/index.js");
+/* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_stable__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vuejs_paginate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuejs-paginate */ "./node_modules/vuejs-paginate/dist/index.js");
+/* harmony import */ var vuejs_paginate__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vuejs_paginate__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vue_slider_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-slider-component */ "./node_modules/vue-slider-component/dist/vue-slider-component.umd.min.js");
+/* harmony import */ var vue_slider_component__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_slider_component__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _import_modules__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./import/modules */ "./src/js/import/modules.js");
+/* harmony import */ var _import_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./import/components */ "./src/js/import/components.js");
+
+
+
+
 
 
 

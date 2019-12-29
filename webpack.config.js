@@ -3,6 +3,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 var webpack = require('webpack')
 
 module.exports = {
+    devtool: "source-map",
     mode: 'production',
 
     entry: {
@@ -66,5 +67,6 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production')
         })
-    ]
+    ],
+
 };

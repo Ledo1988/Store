@@ -6,7 +6,7 @@
   overflow: hidden;
   transition: $transition;
 
-  &:hover {
+  &.active {
     overflow: visible;
     z-index: 2;
 

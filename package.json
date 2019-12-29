@@ -65,6 +65,9 @@
         "yargs": "~13.2.4"
     },
     "dependencies": {
+        "@vue/babel-preset-app": "^4.1.2",
+        "babel-polyfill": "^6.26.0",
+        "core-js": "3",
         "jquery": "^3.4.1",
         "smart-grid": "^2.1.2",
         "swiper": "^5.2.1",

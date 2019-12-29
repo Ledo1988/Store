@@ -1871,28 +1871,28 @@ input[type=number] {
   transition: 0.2s ease-in-out;
 }
 
-.main-catalog__item:hover {
+.main-catalog__item.active {
   overflow: visible;
   z-index: 2;
 }
 
-.main-catalog__item:hover .main-catalog__item-desc {
+.main-catalog__item.active .main-catalog__item-desc {
   background: #FFFFFF;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.0753793);
   border-radius: 2px;
   padding: 20px 16px 20px 58px;
 }
 
-.main-catalog__item:hover .item__swiper--wrapper {
+.main-catalog__item.active .item__swiper--wrapper {
   height: 250px;
 }
 
-.main-catalog__item:hover .item__swiper--wrapper .gallery-thumbs {
+.main-catalog__item.active .item__swiper--wrapper .gallery-thumbs {
   top: calc(100% + 20px);
   height: 100%;
 }
 
-.main-catalog__item:hover .main-catalog__item-desc .item-desc__option {
+.main-catalog__item.active .main-catalog__item-desc .item-desc__option {
   left: calc(50% - 10px);
   text-align: center;
 }
