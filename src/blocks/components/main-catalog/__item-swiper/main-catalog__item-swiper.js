@@ -38,6 +38,7 @@ $( document ).ready(function() {
         let galleryTop = new Swiper(newClassTop, {
             spaceBetween: 7,
             direction: 'vertical',
+            effect: 'fade',
             loop:true,
             loopedSlides: 5, //looped slides should be the same
             thumbs: {

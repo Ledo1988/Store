@@ -71,6 +71,7 @@
         "vue": "^2.6.11",
         "vue-loader": "^15.8.3",
         "vue-slider-component": "^3.1.0",
-        "vue-template-compiler": "^2.6.11"
+        "vue-template-compiler": "^2.6.11",
+        "vuejs-paginate": "^2.1.0"
     }
 }

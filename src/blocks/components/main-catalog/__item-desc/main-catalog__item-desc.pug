@@ -1,0 +1,43 @@
+- var catalogItemTitle
+- var catalogItemDesc
+- var catalogItemRate
+- var catalogItemOption
+
+.main-catalog__item-desc
+	.item-desc
+		.item-desc__option #{catalogItemOption}
+		.item-desc__article Артикул: КК-34123-Х
+		.item-desc__main-title #{catalogItemTitle}
+		.item-desc__content
+			p #{catalogItemDesc}
+		.item-desc__rate #{catalogItemRate}&nbsp;
+			span.currency a
+		ul.item-desc__availability
+			li
+				span.item-desc__title На складе:&nbsp;
+				span.item-desc__desc 300
+			li
+				span.item-desc__title Свободно:&nbsp;
+				span.item-desc__desc 100
+			li
+				span.item-desc__title В резерве:&nbsp;
+				span.item-desc__desc 50
+		.item-desc__features
+			.item-desc__features-title Характеристики
+			ul.item-desc__features-list
+				li
+					span.item-desc__title Плотность:&nbsp;
+					span.item-desc__desc 180 гр/м2
+				li
+					span.item-desc__title Материал:&nbsp;
+					span.item-desc__desc 100% гребенной хлопок
+				li
+					span.item-desc__title Размер:&nbsp;
+					span.item-desc__desc XS/44, S/46, M/48, L/50, XL/52, XXL/54, XXXL/56
+				li
+					span.item-desc__title Упаковка:&nbsp;
+					span.item-desc__desc Индивидуальная
+		a.btn-purple.catalog-filter__show-link(href='javascript:void(0);')
+			span Перейти к товару
+
+

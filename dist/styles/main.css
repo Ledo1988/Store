@@ -1857,7 +1857,7 @@ input[type=number] {
   margin-left: 0;
 }
 
-.main-catalog__items-sorting .items-sorting__view-item svg {
+.main-catalog__items-sorting .items-sorting__view-item img {
   width: 19px;
   height: 18px;
 }
@@ -1865,11 +1865,42 @@ input[type=number] {
 .main-catalog__item {
   padding: 0 10px;
   width: calc(100%/3);
+  max-height: 530px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+}
+
+.main-catalog__item:hover {
+  overflow: visible;
+  z-index: 2;
+}
+
+.main-catalog__item:hover .main-catalog__item-desc {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.0753793);
+  border-radius: 2px;
+  padding: 20px 16px 20px 58px;
+}
+
+.main-catalog__item:hover .item__swiper--wrapper {
+  height: 250px;
+}
+
+.main-catalog__item:hover .item__swiper--wrapper .gallery-thumbs {
+  top: calc(100% + 20px);
+  height: 100%;
+}
+
+.main-catalog__item:hover .main-catalog__item-desc .item-desc__option {
+  left: calc(50% - 10px);
+  text-align: center;
 }
 
 .item__swiper--wrapper {
   height: 280px;
   position: relative;
+  transition: 0.2s ease-in-out;
 }
 
 .item__swiper--wrapper .swiper-container {
@@ -1899,6 +1930,7 @@ input[type=number] {
   position: absolute;
   top: 10px;
   left: 10px;
+  transition: 0.2s ease-in-out;
 }
 
 .item__swiper--wrapper .gallery-thumbs .swiper-slide {
@@ -1949,7 +1981,7 @@ input[type=number] {
   z-index: 2;
 }
 
-.item__swiper--wrapper .item-swiper-button-prev svg {
+.item__swiper--wrapper .item-swiper-button-prev img {
   width: 11px;
   height: 13px;
   transform: rotate(180deg);
@@ -1969,14 +2001,121 @@ input[type=number] {
   z-index: 2;
 }
 
-.item__swiper--wrapper .item-swiper-button-next svg {
+.item__swiper--wrapper .item-swiper-button-next img {
   width: 11px;
   height: 13px;
+}
+
+.main-catalog__item-desc {
+  padding: 20px 25px 20px 0;
+  background-color: #fff;
+  transition: 0.2s ease-in-out;
+}
+
+.main-catalog__item-desc .item-desc {
+  position: relative;
+}
+
+.main-catalog__item-desc .item-desc__article {
+  font-size: 8px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.main-catalog__item-desc .item-desc__option {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 10px + 26px);
+  width: 100%;
+  color: #670EE7;
+  transform: rotate(90deg);
+  font-size: 10px;
+  font-family: "MullerBold";
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: 0.2s ease-in-out;
+}
+
+.main-catalog__item-desc .item-desc__main-title {
+  font-size: 12px;
+  font-family: "MullerBold";
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  line-height: 18px;
+  min-height: 36px;
+}
+
+.main-catalog__item-desc .item-desc__content {
+  font-family: "MullerLight";
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 10px;
+  min-height: 56px;
+}
+
+.main-catalog__item-desc .item-desc__rate {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: "MullerMedium";
+  color: #654A9D;
+  margin-bottom: 10px;
+}
+
+.main-catalog__item-desc .item-desc__rate .currency {
+  font-family: "ALSRubl";
+}
+
+.main-catalog__item-desc .item-desc__availability {
+  margin-bottom: 20px;
+}
+
+.main-catalog__item-desc .item-desc__availability .item-desc__title {
+  min-width: 55px;
+}
+
+.main-catalog__item-desc .item-desc__title {
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.main-catalog__item-desc .item-desc__desc {
+  font-family: "MullerMedium";
+  font-size: 10px;
+  line-height: 16px;
+}
+
+.main-catalog__item-desc .item-desc__features {
+  margin-bottom: 20px;
+}
+
+.main-catalog__item-desc .item-desc__features li {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 7px;
+}
+
+.main-catalog__item-desc .item-desc__features li:last-of-type {
+  margin-bottom: 0;
+}
+
+.main-catalog__item-desc .item-desc__features .item-desc__title {
+  min-width: 57px;
+}
+
+.main-catalog__item-desc .item-desc__features-title {
+  font-family: "MullerMedium";
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .main-catalog--wrapper {
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: 55px;
 }
 
 .main-catalog {
@@ -2060,6 +2199,11 @@ input[type=number] {
   font-family: "MullerLight";
   line-height: 22px;
   margin-bottom: 5px;
+}
+
+.main-catalog__items-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .breadcrumbs {
@@ -2271,6 +2415,90 @@ input[type=number] {
   text-align: center;
   padding: 16px 14px 12px 57px;
   width: 100%;
+}
+
+.main-catalog__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.8px;
+  font-family: "MuseoSansCyrl_500";
+  color: #575757;
+}
+
+.main-catalog__pagination a {
+  border-bottom: 3px solid transparent;
+}
+
+.main-catalog__pagination a:focus {
+  outline: none;
+  border-color: transparent;
+}
+
+.main-catalog__pagination .pagination-prev a {
+  font-size: 0;
+}
+
+.main-catalog__pagination .pagination-prev a::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 11px;
+  margin-right: 20px;
+  background-image: url("/img/sprites/sprite.svg#ico_pagination");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(180deg);
+}
+
+.main-catalog__pagination .pagination-next a {
+  font-size: 0;
+}
+
+.main-catalog__pagination .pagination-next a::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 11px;
+  margin-left: 20px;
+  background-image: url("/img/sprites/sprite.svg#ico_pagination");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-catalog__pagination .page-item {
+  margin-right: 15px;
+}
+
+.main-catalog__pagination .page-item.active {
+  font-family: "MuseoSansCyrl_900";
+}
+
+.main-catalog__pagination .page-item.active a {
+  border-bottom: 3px solid #670EE7;
+  margin-bottom: -2px;
+}
+
+.main-catalog__pagination .page-item:last-of-type {
+  margin-right: 0;
+}
+
+.main-catalog__show-more a {
+  display: block;
+  background: #F5F1FD;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: "MullerBold";
+  padding: 13px;
 }
 
 @media screen and (min-width: 36rem) {

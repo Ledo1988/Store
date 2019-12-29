@@ -1,6 +1,7 @@
 .item__swiper--wrapper {
   height: 280px;
   position: relative;
+  transition: $transition;
 
 
   .swiper-container {
@@ -30,6 +31,7 @@
     position: absolute;
     top: 10px;
     left: 10px;
+    transition: $transition;
   }
 
   .gallery-thumbs .swiper-slide {
@@ -82,7 +84,7 @@
     background-color: rgba(255, 255, 255, 1);
     z-index: 2;
 
-    svg {
+   img {
       width: 11px;
       height: 13px;
       transform: rotate(180deg);
@@ -102,7 +104,7 @@
     background-color: rgba(255, 255, 255, 1);
     z-index: 2;
 
-    svg {
+    img {
       width: 11px;
       height: 13px;
 
