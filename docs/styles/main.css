@@ -1126,52 +1126,52 @@ button.swiper-pagination-bullet {
 
 @font-face {
   font-family: "ALSRubl";
-  src: url("/fonts/ALSRubl.eot?") format("eot"), url("/fonts/ALSRubl.woff") format("woff"), url("/fonts/ALSRubl.ttf") format("truetype"), url("/fonts/ALSRubl.svg#ALSRubl") format("svg");
+  src: url("../fonts/ALSRubl.eot?") format("eot"), url("../fonts/ALSRubl.woff") format("woff"), url("../fonts/ALSRubl.ttf") format("truetype"), url("../fonts/ALSRubl.svg#ALSRubl") format("svg");
 }
 
 @font-face {
   font-family: "MullerHeavy";
-  src: url("/fonts/MullerHeavy.eot?") format("eot"), url("/fonts/MullerHeavy.woff") format("woff"), url("/fonts/MullerHeavy.ttf") format("truetype"), url("/fonts/MullerHeavy.svg#MullerHeavy") format("svg");
+  src: url("../fonts/MullerHeavy.eot?") format("eot"), url("../fonts/MullerHeavy.woff") format("woff"), url("../fonts/MullerHeavy.ttf") format("truetype"), url("../fonts/MullerHeavy.svg#MullerHeavy") format("svg");
 }
 
 @font-face {
   font-family: "MullerExtraBold";
-  src: url("/fonts/MullerExtraBold.eot?") format("eot"), url("/fonts/MullerExtraBold.woff") format("woff"), url("/fonts/MullerExtraBold.ttf") format("truetype"), url("/fonts/MullerExtraBold.svg#MullerExtraBold") format("svg");
+  src: url("../fonts/MullerExtraBold.eot?") format("eot"), url("../fonts/MullerExtraBold.woff") format("woff"), url("../fonts/MullerExtraBold.ttf") format("truetype"), url("../fonts/MullerExtraBold.svg#MullerExtraBold") format("svg");
 }
 
 @font-face {
   font-family: "MullerBold";
-  src: url("/fonts/MullerBold.eot?") format("eot"), url("/fonts/MullerBold.woff") format("woff"), url("/fonts/MullerBold.ttf") format("truetype"), url("/fonts/MullerBold.svg#MullerBold") format("svg");
+  src: url("../fonts/MullerBold.eot?") format("eot"), url("../fonts/MullerBold.woff") format("woff"), url("../fonts/MullerBold.ttf") format("truetype"), url("../fonts/MullerBold.svg#MullerBold") format("svg");
 }
 
 @font-face {
   font-family: "MullerMedium";
-  src: url("/fonts/MullerMedium.eot?") format("eot"), url("/fonts/MullerMedium.woff") format("woff"), url("/fonts/MullerMedium.ttf") format("truetype"), url("/fonts/MullerMedium.svg#MullerMedium") format("svg");
+  src: url("../fonts/MullerMedium.eot?") format("eot"), url("../fonts/MullerMedium.woff") format("woff"), url("../fonts/MullerMedium.ttf") format("truetype"), url("../fonts/MullerMedium.svg#MullerMedium") format("svg");
 }
 
 @font-face {
   font-family: "MullerRegular";
-  src: url("/fonts/MullerRegular.eot?") format("eot"), url("/fonts/MullerRegular.woff") format("woff"), url("/fonts/MullerRegular.ttf") format("truetype"), url("/fonts/MullerRegular.svg#MullerRegular") format("svg");
+  src: url("../fonts/MullerRegular.eot?") format("eot"), url("../fonts/MullerRegular.woff") format("woff"), url("../fonts/MullerRegular.ttf") format("truetype"), url("../fonts/MullerRegular.svg#MullerRegular") format("svg");
 }
 
 @font-face {
   font-family: "MullerLight";
-  src: url("/fonts/MullerLight.eot?") format("eot"), url("/fonts/MullerLight.woff") format("woff"), url("/fonts/MullerLight.ttf") format("truetype"), url("/fonts/MullerLight.svg#MullerLight") format("svg");
+  src: url("../fonts/MullerLight.eot?") format("eot"), url("../fonts/MullerLight.woff") format("woff"), url("../fonts/MullerLight.ttf") format("truetype"), url("../fonts/MullerLight.svg#MullerLight") format("svg");
 }
 
 @font-face {
   font-family: "MuseoSansCyrl_500";
-  src: url("/fonts/MuseoSansCyrl_500.eot?") format("eot"), url("/fonts/MuseoSansCyrl_500.woff") format("woff"), url("/fonts/MuseoSansCyrl_500.ttf") format("truetype"), url("/fonts/MuseoSansCyrl_500.svg#MuseoSansCyrl_500") format("svg");
+  src: url("../fonts/MuseoSansCyrl_500.eot?") format("eot"), url("../fonts/MuseoSansCyrl_500.woff") format("woff"), url("../fonts/MuseoSansCyrl_500.ttf") format("truetype"), url("../fonts/MuseoSansCyrl_500.svg#MuseoSansCyrl_500") format("svg");
 }
 
 @font-face {
   font-family: "MuseoSansCyrl_700";
-  src: url("/fonts/MuseoSansCyrl_700.eot?") format("eot"), url("/fonts/MuseoSansCyrl_700.woff") format("woff"), url("/fonts/MuseoSansCyrl_700.ttf") format("truetype"), url("/fonts/MuseoSansCyrl_700.svg#MuseoSansCyrl_700") format("svg");
+  src: url("../fonts/MuseoSansCyrl_700.eot?") format("eot"), url("../fonts/MuseoSansCyrl_700.woff") format("woff"), url("../fonts/MuseoSansCyrl_700.ttf") format("truetype"), url("../fonts/MuseoSansCyrl_700.svg#MuseoSansCyrl_700") format("svg");
 }
 
 @font-face {
   font-family: "MuseoSansCyrl_900";
-  src: url("/fonts/MuseoSansCyrl_900.eot?") format("eot"), url("/fonts/MuseoSansCyrl_900.woff") format("woff"), url("/fonts/MuseoSansCyrl_900.ttf") format("truetype"), url("/fonts/MuseoSansCyrl_900.svg#MuseoSansCyrl_900") format("svg");
+  src: url("../fonts/MuseoSansCyrl_900.eot?") format("eot"), url("../fonts/MuseoSansCyrl_900.woff") format("woff"), url("../fonts/MuseoSansCyrl_900.ttf") format("truetype"), url("../fonts/MuseoSansCyrl_900.svg#MuseoSansCyrl_900") format("svg");
 }
 
 * {
