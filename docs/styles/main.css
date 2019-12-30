@@ -1146,7 +1146,7 @@ button.swiper-pagination-bullet {
 
 @font-face {
   font-family: "MullerMedium";
-  src: url("./fonts/MullerMedium.eot?") format("eot"), url("./fonts/MullerMedium.woff") format("woff"), url("./fonts/MullerMedium.ttf") format("truetype"), url("./fonts/MullerMedium.svg#MullerMedium") format("svg");
+  src: url("../fonts/MullerMedium.eot?") format("eot"), url("../fonts/MullerMedium.woff") format("woff"), url("../fonts/MullerMedium.ttf") format("truetype"), url("../fonts/MullerMedium.svg#MullerMedium") format("svg");
 }
 
 @font-face {
@@ -1397,7 +1397,7 @@ input:-webkit-autofill {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url("/img/sprites/sprite.svg#ico_tick");
+  background-image: url("img/sprites/sprite.svg#ico_tick");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 12px;
@@ -1471,7 +1471,7 @@ input:-webkit-autofill {
   display: block;
   width: 20px;
   height: 8px;
-  background-image: url("/img/ico/ico_arow-right-green.png");
+  background-image: url("img/ico/ico_arow-right-green.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1533,7 +1533,7 @@ main.main-detailed {
   left: calc(100% - 27px);
   width: 27px;
   height: 23px;
-  background-image: url("/img/ico/ico_textarea.png");
+  background-image: url("img/ico/ico_textarea.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1794,7 +1794,7 @@ input[type=number] {
   position: relative;
   height: 9px;
   width: 6px;
-  background-image: url("/img/sprites/sprite.svg#ico_arrow-down-purple");
+  background-image: url("img/sprites/sprite.svg#ico_arrow-down-purple");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1810,7 +1810,7 @@ input[type=number] {
 }
 
 .main-catalog__items-sorting .items-sorting__main .items-sorting__rate .items-sorting__rate-item.active::before {
-  background-image: url("/img/sprites/sprite.svg#ico_arrow-down-white");
+  background-image: url("img/sprites/sprite.svg#ico_arrow-down-white");
 }
 
 .main-catalog__items-sorting .items-sorting__main-item {
@@ -2340,7 +2340,7 @@ input[type=number] {
   width: 8px;
   height: 5px;
   margin-left: 3px;
-  background-image: url("/img/sprites/sprite.svg#ico_to-top-black");
+  background-image: url("img/sprites/sprite.svg#ico_to-top-black");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -2446,7 +2446,7 @@ input[type=number] {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url("/img/sprites/sprite.svg#ico_to-right-white");
+  background-image: url("img/sprites/sprite.svg#ico_to-right-white");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 16px;
@@ -2499,7 +2499,7 @@ input[type=number] {
   width: 16px;
   height: 11px;
   margin-right: 20px;
-  background-image: url("/img/sprites/sprite.svg#ico_pagination");
+  background-image: url("img/sprites/sprite.svg#ico_pagination");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2516,7 +2516,7 @@ input[type=number] {
   width: 16px;
   height: 11px;
   margin-left: 20px;
-  background-image: url("/img/sprites/sprite.svg#ico_pagination");
+  background-image: url("img/sprites/sprite.svg#ico_pagination");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2625,7 +2625,7 @@ input[type=number] {
   }
 
   .main-catalog__item-desc .catalog-filter__show-link.mobile-cart:after {
-    background-image: url("/img/sprites/sprite.svg#ico_cart");
+    background-image: url("img/sprites/sprite.svg#ico_cart");
     background-size: 17px;
   }
 
