@@ -2236,10 +2236,12 @@ input[type=number] {
   margin-bottom: 5px;
 }
 
+.main-catalog__sub-menu .sub-menu__choice-mobile {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .main-catalog__sub-menu .sub-menu__choice-mobile {
-    display: none;
-  }
+
 
   .main-catalog__sub-menu .sub-menu__choice {
     display: none;
