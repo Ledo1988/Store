@@ -2240,14 +2240,6 @@ input[type=number] {
   display: none;
 }
 
-.main-catalog__sub-menu .sub-menu__choice {
-  display: none;
-}
-
-.main-catalog__sub-menu #catalog-filter .catalog-filter__close-link {
-  display: none;
-}
-
 .main-catalog__items-container {
   display: flex;
   flex-wrap: wrap;
@@ -2752,6 +2744,14 @@ input[type=number] {
     font-family: "MullerBold";
     letter-spacing: 1.5px;
     text-transform: uppercase;
+  }
+
+  .main-catalog__sub-menu .sub-menu__choice {
+    display: none;
+  }
+
+  .main-catalog__sub-menu #catalog-filter .catalog-filter__close-link {
+    display: none;
   }
 
   .breadcrumbs {

@@ -41,7 +41,7 @@
       justify-content: space-between;
       align-items: center;
 
-      &-title{
+      &-title {
         flex-grow: 1;
         text-align: center;
         font-size: 14px;
@@ -52,6 +52,7 @@
     }
   }
 
+  @media(max-width: 768px) {
     .sub-menu__choice {
       display: none;
     }
@@ -69,3 +70,4 @@
 
     }
   }
+}
