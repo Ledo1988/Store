@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Каталог</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
+  </head>
+  <body>
+    <main>
+      <div class="main-catalog--wrapper">
+        <div class="main-catalog">
+          <div class="main-catalog__header">
+            <ul class="breadcrumbs">
+              <li><a href="javascript:void(0);">Главная</a></li>
+              <li><a href="javascript:void(0);">Каталог</a></li>
+              <li>Футболки</li>
+            </ul>
+            <div class="main-catalog__header-title">
+              <h1>Каталог</h1>
+              <div class="main-catalog__header-choice header-choice"><span class="header-choice__title">Футболки</span><span class="header-choice__amount">12</span></div>
+            </div>
+            <div class="main-catalog__header-section">
+              <div class="main-catalog__items-types">
+                <div class="items-types">
+                  <div class="items-types__title">виды нанесения:</div>
+                  <ul class="items-types__list">
+                    <li><a href="javascript:void(0);">вышивка</a></li>
+                    <li><a href="javascript:void(0);">полноцвет</a></li>
+                    <li><a href="javascript:void(0);">водынми черниалми</a></li>
+                    <li><a href="javascript:void(0);">флекс</a></li>
+                    <li><a href="javascript:void(0);">шелкография</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-catalog__content">
+            <div class="main-catalog__sub-menu sub-menu">
+              <div class="sub-menu__choice-mobile">
+                <div class="sub-menu__choice-mobile-title">Фильтры</div>
+                <div class="sub-menu__choice-mobile-close filter-close"><img src="/img/ico_close.png" width="26" height="26"></div>
+              </div>
+              <div class="sub-menu__choice">
+                <ul class="sub-menu__choice-list choice-list">
+                  <li><a href="javascript:void(0);"><span class="choice-list__title">футболки поло</span><span class="choice-list__amount">8</span></a></li>
+                  <li><a href="javascript:void(0);"><span class="choice-list__title">пледы</span><span class="choice-list__amount">32</span></a></li>
+                  <li><a href="javascript:void(0);"><span class="choice-list__title">толстовки</span><span class="choice-list__amount">9</span></a></li>
+                  <li><a href="javascript:void(0);"><span class="choice-list__title">жилеты</span><span class="choice-list__amount">6</span></a></li>
+                  <li><a href="javascript:void(0);"><span class="choice-list__title">сумки</span><span class="choice-list__amount">44</span></a></li>
+                  <li><a href="javascript:void(0);"><span class="choice-list__title">куртки</span><span class="choice-list__amount">5</span></a></li>
+                  <li><a href="javascript:void(0);"><span class="choice-list__title">кепки</span><span class="choice-list__amount">89</span></a></li>
+                </ul>
+              </div>
+              <div id="catalog-filter">
+                <div class="catalog-filter--content"><a class="catalog-filter__close-link" @click="expandAll" href="javascript:void(0);"><span>Свернуть всё</span></a>
+                  <div class="catalog-filter__multiline">
+                    <Accordion title="цена" @expand="expandAll">
+                      <div class="catalog-filter__item-choice">
+                        <div id="catalog-filter__slider"></div>
+                        <div class="choice-amount-number--wrapper">
+                          <div class="checkbox-wrapper">
+                            <input type="checkbox" id="choice-amount" name="choice-amount" value="">
+                            <label for="choice-amount"><span>в наличии от</span></label>
+                          </div>
+                          <div class="choice-amount-number">
+                            <input type="number" id="choice-amount-number" name="choice-amount-number" value="">
+                            <label for="choice-amount-number"><span>шт.</span></label>
+                          </div>
+                        </div>
+                      </div>
+                    </Accordion>
+                    <Accordion title="тип продукции" @expand="expandAll">
+                      <div class="catalog-filter__item-choice">
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-man" name="choice-man" value=""/>
+                          <label for="choice-man"><span>мужская</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-woman" name="choice-woman" value=""/>
+                          <label for="choice-woman"><span>женская</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-kids" name="choice-kids" value=""/>
+                          <label for="choice-kids"><span>детская</span></label>
+                        </div>
+                      </div>
+                    </Accordion>
+                    <Accordion title="бренд" @expand="expandAll">
+                      <div class="catalog-filter__item-choice">
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-Portobello" name="choice-Portobello" value=""/>
+                          <label for="choice-Portobello"><span>Portobello</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-Parker" name="choice-Parker" value=""/>
+                          <label for="choice-Parker"><span>Parker</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-Waterman" name="choice-Waterman" value=""/>
+                          <label for="choice-Waterman"><span>Waterman</span></label>
+                        </div>
+                      </div>
+                    </Accordion>
+                    <Accordion title="цвет" @expand="expandAll">
+                      <div class="catalog-filter__item-choice">
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="color-red" name="color-red" value=""/>
+                          <label for="color-red"><span class="color color-red">красный</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="color-green" name="color-green" value=""/>
+                          <label for="color-green"><span class="color color-green">зеленый</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="color-blue" name="color-blue" value=""/>
+                          <label for="color-blue"><span class="color color-blue">синий</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="color-black" name="color-black" value=""/>
+                          <label for="color-black"><span class="color color-black">черный</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="color-white" name="color-white" value=""/>
+                          <label for="color-white"><span class="color color-white">белый</span></label>
+                        </div>
+                      </div>
+                    </Accordion>
+                    <Accordion title="материал" @expand="expandAll">
+                      <div class="catalog-filter__item-choice">
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-material-acrylic" name="choice-Portobello" value=""/>
+                          <label for="choice-material-acrylic"><span>акрил</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-material-acrylic-100" name="choice-material-acrylic-100" value=""/>
+                          <label for="choice-material-acrylic-100"><span>акрил 100%</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-material-acrylic-50" name="choice-material-acrylic-50" value=""/>
+                          <label for="choice-material-acrylic-50"><span>акрил 50%</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-material-acrylic-viscose" name="choice-material-acrylic-viscose" value=""/>
+                          <label for="choice-material-acrylic-viscose"><span>вискоза</span></label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                          <input type="checkbox" id="choice-material-Jersey" name="choice-material-Jersey" value=""/>
+                          <label for="choice-material-Jersey"><span>джерси</span></label>
+                        </div>
+                      </div>
+                    </Accordion>
+                  </div>
+                  <div class="catalog-filter__btns">
+                    <button class="btn-purple catalog-filter__show-link" type="submit"><span>показать товары</span></button>
+                    <button class="catalog-filter__reset-link" type="reset">сбросить фильтр</button>
+                  </div>
+                </div>
+              </div>
+              <div class="sub-menu__short-comment">
+                <p>Описание категории, где рассказано о том, что показывается в данной категории, какие товары, их особенности, еще какие-то вещи, которые могут помочь пользователю, потенциальному покупателю выбрать себе товар по лучшей цене с лучшими характеристиками.</p>
+              </div>
+            </div>
+            <div class="main-catalog__items">
+              <div class="main-catalog__items-sorting">
+                <div class="items-sorting">
+                  <div class="items-sorting__main"><span class="items-sorting__title">сортировать по:</span><a class="items-sorting__main-item items-sorting__main-item-rate active items-sorting__rate" href="javascript:void(0);"><span class="items-sorting__title">Цена</span><span class="items-sorting__rate-item active items-sorting__rate-item-higher"></span><span class="items-sorting__rate-item items-sorting__rate-item-less"></span></a><a class="items-sorting__main-item" href="javascript:void(0);"><span class="items-sorting__title">артикулу</span></a><a class="items-sorting__main-item" href="javascript:void(0);"><span class="items-sorting__title">наименованию</span></a></div>
+                  <div class="items-sorting__view"><span class="items-sorting__title">вид:</span><a class="items-sorting__view-item active" href="javascript:void(0);"><img src="img/sprites/sprite.svg#ico_sorting-1"></a><a class="items-sorting__view-item" href="javascript:void(0);"><img src="img/sprites/sprite.svg#ico_sorting-2"></a></div>
+                </div>
+                <div class="main-catalog__items-sorting-mobile"><a class="main-catalog__show-more-link filter-open" href="javascript:void(0);"><span>Показать фильтры &nbsp;</span><img src="/img/ico_filter.png" width="22" height="18"></a></div>
+              </div>
+              <div class="main-catalog__items-container">
+                <div class="main-catalog__item">
+                  <div class="item__swiper--wrapper">
+                    <div class="swiper-container gallery-top">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-1.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-3.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-4.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-5.jpg)"></div>
+                      </div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                      <div class="item-swiper-button-next"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-color: #FFFFFF; border-color:#979797;"><span class="border" style="border-color: #979797;"></span></div>
+                        <div class="swiper-slide" style="background-color: #D12C2C;"><span class="border" style="border-color: #D12C2C;"></span></div>
+                        <div class="swiper-slide" style="background-color: #000000;"><span class="border" style="border-color: #000000;"></span></div>
+                        <div class="swiper-slide" style="background-color: #00CDFF;"><span class="border" style="border-color: #00CDFF;"></span></div>
+                        <div class="swiper-slide" style="background-color: #DE7F1A;"><span class="border" style="border-color: #DE7F1A;"></span></div>
+                      </div>
+                      <div class="item-swiper-button-prev"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                    </div>
+                  </div>
+                  <div class="main-catalog__item-desc">
+                    <div class="item-desc">
+                      <div class="item-desc__option">up 20.01.2019</div>
+                      <div class="item-desc__article">Артикул: КК-34123-Х</div>
+                      <div class="item-desc__main-title">2600 ШР сп Dart Polished голубой Hex.Cyan</div>
+                      <div class="item-desc__content">
+                        <p>Описание товара, включает в себя несколько строк товара, включает в себя несколько строк</p>
+                      </div>
+                      <div class="item-desc__rate">
+                        <div class="item-desc__rate--wrapper">12 000&nbsp;<span class="currency">a</span></div>
+                        <div class="item-desc__colors"><span class="color red"></span><span class="color black"></span><span class="color white"></span><span class="color orange"></span><span>еще 15</span></div>
+                      </div>
+                      <ul class="item-desc__availability">
+                        <li><span class="item-desc__title">На складе:&nbsp;</span><span class="item-desc__desc">300</span></li>
+                        <li><span class="item-desc__title">Свободно:&nbsp;</span><span class="item-desc__desc">100</span></li>
+                        <li><span class="item-desc__title">В резерве:&nbsp;</span><span class="item-desc__desc">50</span></li>
+                      </ul>
+                      <div class="item-desc__features">
+                        <div class="item-desc__features-title">Характеристики</div>
+                        <ul class="item-desc__features-list">
+                          <li><span class="item-desc__title">Плотность:&nbsp;</span><span class="item-desc__desc">180 гр/м2</span></li>
+                          <li><span class="item-desc__title">Материал:&nbsp;</span><span class="item-desc__desc">100% гребенной хлопок</span></li>
+                          <li><span class="item-desc__title">Размер:&nbsp;</span><span class="item-desc__desc">XS/44, S/46, M/48, L/50, XL/52, XXL/54, XXXL/56</span></li>
+                          <li><span class="item-desc__title">Упаковка:&nbsp;</span><span class="item-desc__desc">Индивидуальная</span></li>
+                        </ul>
+                      </div><a class="btn-purple catalog-filter__show-link" href="javascript:void(0);"><span>Перейти к товару</span></a><a class="btn-purple catalog-filter__show-link mobile-cart" href="javascript:void(0);"><span>в корзину</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-catalog__item">
+                  <div class="item__swiper--wrapper">
+                    <div class="swiper-container gallery-top">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-3.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-4.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-5.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-1.png)"></div>
+                      </div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                      <div class="item-swiper-button-next"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-color: #FFFFFF; border-color:#979797;"><span class="border" style="border-color: #979797;"></span></div>
+                        <div class="swiper-slide" style="background-color: #D12C2C;"><span class="border" style="border-color: #D12C2C;"></span></div>
+                        <div class="swiper-slide" style="background-color: #000000;"><span class="border" style="border-color: #000000;"></span></div>
+                        <div class="swiper-slide" style="background-color: #00CDFF;"><span class="border" style="border-color: #00CDFF;"></span></div>
+                        <div class="swiper-slide" style="background-color: #DE7F1A;"><span class="border" style="border-color: #DE7F1A;"></span></div>
+                      </div>
+                      <div class="item-swiper-button-prev"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                    </div>
+                  </div>
+                  <div class="main-catalog__item-desc">
+                    <div class="item-desc">
+                      <div class="item-desc__option">sale</div>
+                      <div class="item-desc__article">Артикул: КК-34123-Х</div>
+                      <div class="item-desc__main-title">Ветровка детская Surf Kids 210, ярко-синяя</div>
+                      <div class="item-desc__content">
+                        <p>Водонепроницаемая, вентиляционные отверстия, безопасный шнур по низу изделия. Капюшон убирается в воротник.</p>
+                      </div>
+                      <div class="item-desc__rate">
+                        <div class="item-desc__rate--wrapper">5 000&nbsp;<span class="currency">a</span></div>
+                        <div class="item-desc__colors"><span class="color red"></span><span class="color black"></span><span class="color white"></span><span class="color orange"></span><span>еще 15</span></div>
+                      </div>
+                      <ul class="item-desc__availability">
+                        <li><span class="item-desc__title">На складе:&nbsp;</span><span class="item-desc__desc">300</span></li>
+                        <li><span class="item-desc__title">Свободно:&nbsp;</span><span class="item-desc__desc">100</span></li>
+                        <li><span class="item-desc__title">В резерве:&nbsp;</span><span class="item-desc__desc">50</span></li>
+                      </ul>
+                      <div class="item-desc__features">
+                        <div class="item-desc__features-title">Характеристики</div>
+                        <ul class="item-desc__features-list">
+                          <li><span class="item-desc__title">Плотность:&nbsp;</span><span class="item-desc__desc">180 гр/м2</span></li>
+                          <li><span class="item-desc__title">Материал:&nbsp;</span><span class="item-desc__desc">100% гребенной хлопок</span></li>
+                          <li><span class="item-desc__title">Размер:&nbsp;</span><span class="item-desc__desc">XS/44, S/46, M/48, L/50, XL/52, XXL/54, XXXL/56</span></li>
+                          <li><span class="item-desc__title">Упаковка:&nbsp;</span><span class="item-desc__desc">Индивидуальная</span></li>
+                        </ul>
+                      </div><a class="btn-purple catalog-filter__show-link" href="javascript:void(0);"><span>Перейти к товару</span></a><a class="btn-purple catalog-filter__show-link mobile-cart" href="javascript:void(0);"><span>в корзину</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-catalog__item">
+                  <div class="item__swiper--wrapper">
+                    <div class="swiper-container gallery-top">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-3.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-4.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-5.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-1.png)"></div>
+                      </div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                      <div class="item-swiper-button-next"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-color: #FFFFFF; border-color:#979797;"><span class="border" style="border-color: #979797;"></span></div>
+                        <div class="swiper-slide" style="background-color: #D12C2C;"><span class="border" style="border-color: #D12C2C;"></span></div>
+                        <div class="swiper-slide" style="background-color: #000000;"><span class="border" style="border-color: #000000;"></span></div>
+                        <div class="swiper-slide" style="background-color: #00CDFF;"><span class="border" style="border-color: #00CDFF;"></span></div>
+                        <div class="swiper-slide" style="background-color: #DE7F1A;"><span class="border" style="border-color: #DE7F1A;"></span></div>
+                      </div>
+                      <div class="item-swiper-button-prev"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                    </div>
+                  </div>
+                  <div class="main-catalog__item-desc">
+                    <div class="item-desc">
+                      <div class="item-desc__option"></div>
+                      <div class="item-desc__article">Артикул: КК-34123-Х</div>
+                      <div class="item-desc__main-title">Ветровка Unit Kivach, оранжевая</div>
+                      <div class="item-desc__content">
+                        <p>Капюшон убирается в воротник. Два наружных кармана на молнии.</p>
+                      </div>
+                      <div class="item-desc__rate">
+                        <div class="item-desc__rate--wrapper">1 000&nbsp;<span class="currency">a</span></div>
+                        <div class="item-desc__colors"><span class="color red"></span><span class="color black"></span><span class="color white"></span><span class="color orange"></span><span>еще 15</span></div>
+                      </div>
+                      <ul class="item-desc__availability">
+                        <li><span class="item-desc__title">На складе:&nbsp;</span><span class="item-desc__desc">300</span></li>
+                        <li><span class="item-desc__title">Свободно:&nbsp;</span><span class="item-desc__desc">100</span></li>
+                        <li><span class="item-desc__title">В резерве:&nbsp;</span><span class="item-desc__desc">50</span></li>
+                      </ul>
+                      <div class="item-desc__features">
+                        <div class="item-desc__features-title">Характеристики</div>
+                        <ul class="item-desc__features-list">
+                          <li><span class="item-desc__title">Плотность:&nbsp;</span><span class="item-desc__desc">180 гр/м2</span></li>
+                          <li><span class="item-desc__title">Материал:&nbsp;</span><span class="item-desc__desc">100% гребенной хлопок</span></li>
+                          <li><span class="item-desc__title">Размер:&nbsp;</span><span class="item-desc__desc">XS/44, S/46, M/48, L/50, XL/52, XXL/54, XXXL/56</span></li>
+                          <li><span class="item-desc__title">Упаковка:&nbsp;</span><span class="item-desc__desc">Индивидуальная</span></li>
+                        </ul>
+                      </div><a class="btn-purple catalog-filter__show-link" href="javascript:void(0);"><span>Перейти к товару</span></a><a class="btn-purple catalog-filter__show-link mobile-cart" href="javascript:void(0);"><span>в корзину</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-catalog__item">
+                  <div class="item__swiper--wrapper">
+                    <div class="swiper-container gallery-top">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-4.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-5.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-6.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-1.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-2.jpg)"></div>
+                      </div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                      <div class="item-swiper-button-next"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-color: #FFFFFF; border-color:#979797;"><span class="border" style="border-color: #979797;"></span></div>
+                        <div class="swiper-slide" style="background-color: #D12C2C;"><span class="border" style="border-color: #D12C2C;"></span></div>
+                        <div class="swiper-slide" style="background-color: #000000;"><span class="border" style="border-color: #000000;"></span></div>
+                        <div class="swiper-slide" style="background-color: #00CDFF;"><span class="border" style="border-color: #00CDFF;"></span></div>
+                        <div class="swiper-slide" style="background-color: #DE7F1A;"><span class="border" style="border-color: #DE7F1A;"></span></div>
+                      </div>
+                      <div class="item-swiper-button-prev"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                    </div>
+                  </div>
+                  <div class="main-catalog__item-desc">
+                    <div class="item-desc">
+                      <div class="item-desc__option">up 20.01.2019</div>
+                      <div class="item-desc__article">Артикул: КК-34123-Х</div>
+                      <div class="item-desc__main-title">Футболка женская Regent Women</div>
+                      <div class="item-desc__content">
+                        <p>Модель без боковых швов, стиль классический, унисекс.</p>
+                      </div>
+                      <div class="item-desc__rate">
+                        <div class="item-desc__rate--wrapper">2 000&nbsp;<span class="currency">a</span></div>
+                        <div class="item-desc__colors"><span class="color red"></span><span class="color black"></span><span class="color white"></span><span class="color orange"></span><span>еще 15</span></div>
+                      </div>
+                      <ul class="item-desc__availability">
+                        <li><span class="item-desc__title">На складе:&nbsp;</span><span class="item-desc__desc">300</span></li>
+                        <li><span class="item-desc__title">Свободно:&nbsp;</span><span class="item-desc__desc">100</span></li>
+                        <li><span class="item-desc__title">В резерве:&nbsp;</span><span class="item-desc__desc">50</span></li>
+                      </ul>
+                      <div class="item-desc__features">
+                        <div class="item-desc__features-title">Характеристики</div>
+                        <ul class="item-desc__features-list">
+                          <li><span class="item-desc__title">Плотность:&nbsp;</span><span class="item-desc__desc">180 гр/м2</span></li>
+                          <li><span class="item-desc__title">Материал:&nbsp;</span><span class="item-desc__desc">100% гребенной хлопок</span></li>
+                          <li><span class="item-desc__title">Размер:&nbsp;</span><span class="item-desc__desc">XS/44, S/46, M/48, L/50, XL/52, XXL/54, XXXL/56</span></li>
+                          <li><span class="item-desc__title">Упаковка:&nbsp;</span><span class="item-desc__desc">Индивидуальная</span></li>
+                        </ul>
+                      </div><a class="btn-purple catalog-filter__show-link" href="javascript:void(0);"><span>Перейти к товару</span></a><a class="btn-purple catalog-filter__show-link mobile-cart" href="javascript:void(0);"><span>в корзину</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-catalog__item">
+                  <div class="item__swiper--wrapper">
+                    <div class="swiper-container gallery-top">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-5.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-6.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-4.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-1.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-2.jpg)"></div>
+                      </div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                      <div class="item-swiper-button-next"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-color: #FFFFFF; border-color:#979797;"><span class="border" style="border-color: #979797;"></span></div>
+                        <div class="swiper-slide" style="background-color: #D12C2C;"><span class="border" style="border-color: #D12C2C;"></span></div>
+                        <div class="swiper-slide" style="background-color: #000000;"><span class="border" style="border-color: #000000;"></span></div>
+                        <div class="swiper-slide" style="background-color: #00CDFF;"><span class="border" style="border-color: #00CDFF;"></span></div>
+                        <div class="swiper-slide" style="background-color: #DE7F1A;"><span class="border" style="border-color: #DE7F1A;"></span></div>
+                      </div>
+                      <div class="item-swiper-button-prev"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                    </div>
+                  </div>
+                  <div class="main-catalog__item-desc">
+                    <div class="item-desc">
+                      <div class="item-desc__option">sale</div>
+                      <div class="item-desc__article">Артикул: КК-34123-Х</div>
+                      <div class="item-desc__main-title">Футболка T-bolka 140, синяя (сапфировая)</div>
+                      <div class="item-desc__content">
+                        <p>Описание товара, включает в себя несколько строк товара, включает в себя несколько строк</p>
+                      </div>
+                      <div class="item-desc__rate">
+                        <div class="item-desc__rate--wrapper">1 200&nbsp;<span class="currency">a</span></div>
+                        <div class="item-desc__colors"><span class="color red"></span><span class="color black"></span><span class="color white"></span><span class="color orange"></span><span>еще 15</span></div>
+                      </div>
+                      <ul class="item-desc__availability">
+                        <li><span class="item-desc__title">На складе:&nbsp;</span><span class="item-desc__desc">300</span></li>
+                        <li><span class="item-desc__title">Свободно:&nbsp;</span><span class="item-desc__desc">100</span></li>
+                        <li><span class="item-desc__title">В резерве:&nbsp;</span><span class="item-desc__desc">50</span></li>
+                      </ul>
+                      <div class="item-desc__features">
+                        <div class="item-desc__features-title">Характеристики</div>
+                        <ul class="item-desc__features-list">
+                          <li><span class="item-desc__title">Плотность:&nbsp;</span><span class="item-desc__desc">180 гр/м2</span></li>
+                          <li><span class="item-desc__title">Материал:&nbsp;</span><span class="item-desc__desc">100% гребенной хлопок</span></li>
+                          <li><span class="item-desc__title">Размер:&nbsp;</span><span class="item-desc__desc">XS/44, S/46, M/48, L/50, XL/52, XXL/54, XXXL/56</span></li>
+                          <li><span class="item-desc__title">Упаковка:&nbsp;</span><span class="item-desc__desc">Индивидуальная</span></li>
+                        </ul>
+                      </div><a class="btn-purple catalog-filter__show-link" href="javascript:void(0);"><span>Перейти к товару</span></a><a class="btn-purple catalog-filter__show-link mobile-cart" href="javascript:void(0);"><span>в корзину</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-catalog__item">
+                  <div class="item__swiper--wrapper">
+                    <div class="swiper-container gallery-top">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-6.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-5.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-4.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-1.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-2.jpg)"></div>
+                      </div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                      <div class="item-swiper-button-next"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-color: #FFFFFF; border-color:#979797;"><span class="border" style="border-color: #979797;"></span></div>
+                        <div class="swiper-slide" style="background-color: #D12C2C;"><span class="border" style="border-color: #D12C2C;"></span></div>
+                        <div class="swiper-slide" style="background-color: #000000;"><span class="border" style="border-color: #000000;"></span></div>
+                        <div class="swiper-slide" style="background-color: #00CDFF;"><span class="border" style="border-color: #00CDFF;"></span></div>
+                        <div class="swiper-slide" style="background-color: #DE7F1A;"><span class="border" style="border-color: #DE7F1A;"></span></div>
+                      </div>
+                      <div class="item-swiper-button-prev"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                    </div>
+                  </div>
+                  <div class="main-catalog__item-desc">
+                    <div class="item-desc">
+                      <div class="item-desc__option">up 20.01.2019</div>
+                      <div class="item-desc__article">Артикул: КК-34123-Х</div>
+                      <div class="item-desc__main-title">Футболка женская Regent Women</div>
+                      <div class="item-desc__content">
+                        <p>Модель без боковых швов, стиль классический, унисекс.</p>
+                      </div>
+                      <div class="item-desc__rate">
+                        <div class="item-desc__rate--wrapper">1 000&nbsp;<span class="currency">a</span></div>
+                        <div class="item-desc__colors"><span class="color red"></span><span class="color black"></span><span class="color white"></span><span class="color orange"></span><span>еще 15</span></div>
+                      </div>
+                      <ul class="item-desc__availability">
+                        <li><span class="item-desc__title">На складе:&nbsp;</span><span class="item-desc__desc">300</span></li>
+                        <li><span class="item-desc__title">Свободно:&nbsp;</span><span class="item-desc__desc">100</span></li>
+                        <li><span class="item-desc__title">В резерве:&nbsp;</span><span class="item-desc__desc">50</span></li>
+                      </ul>
+                      <div class="item-desc__features">
+                        <div class="item-desc__features-title">Характеристики</div>
+                        <ul class="item-desc__features-list">
+                          <li><span class="item-desc__title">Плотность:&nbsp;</span><span class="item-desc__desc">180 гр/м2</span></li>
+                          <li><span class="item-desc__title">Материал:&nbsp;</span><span class="item-desc__desc">100% гребенной хлопок</span></li>
+                          <li><span class="item-desc__title">Размер:&nbsp;</span><span class="item-desc__desc">XS/44, S/46, M/48, L/50, XL/52, XXL/54, XXXL/56</span></li>
+                          <li><span class="item-desc__title">Упаковка:&nbsp;</span><span class="item-desc__desc">Индивидуальная</span></li>
+                        </ul>
+                      </div><a class="btn-purple catalog-filter__show-link" href="javascript:void(0);"><span>Перейти к товару</span></a><a class="btn-purple catalog-filter__show-link mobile-cart" href="javascript:void(0);"><span>в корзину</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-catalog__item">
+                  <div class="item__swiper--wrapper">
+                    <div class="swiper-container gallery-top">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-1.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-3.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-4.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-5.jpg)"></div>
+                      </div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                      <div class="item-swiper-button-next"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-color: #FFFFFF; border-color:#979797;"><span class="border" style="border-color: #979797;"></span></div>
+                        <div class="swiper-slide" style="background-color: #D12C2C;"><span class="border" style="border-color: #D12C2C;"></span></div>
+                        <div class="swiper-slide" style="background-color: #000000;"><span class="border" style="border-color: #000000;"></span></div>
+                        <div class="swiper-slide" style="background-color: #00CDFF;"><span class="border" style="border-color: #00CDFF;"></span></div>
+                        <div class="swiper-slide" style="background-color: #DE7F1A;"><span class="border" style="border-color: #DE7F1A;"></span></div>
+                      </div>
+                      <div class="item-swiper-button-prev"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                    </div>
+                  </div>
+                  <div class="main-catalog__item-desc">
+                    <div class="item-desc">
+                      <div class="item-desc__option">up 20.01.2019</div>
+                      <div class="item-desc__article">Артикул: КК-34123-Х</div>
+                      <div class="item-desc__main-title">2600 ШР сп Dart Polished голубой Hex.Cyan</div>
+                      <div class="item-desc__content">
+                        <p>Описание товара, включает в себя несколько строк товара, включает в себя несколько строк</p>
+                      </div>
+                      <div class="item-desc__rate">
+                        <div class="item-desc__rate--wrapper">12 000&nbsp;<span class="currency">a</span></div>
+                        <div class="item-desc__colors"><span class="color red"></span><span class="color black"></span><span class="color white"></span><span class="color orange"></span><span>еще 15</span></div>
+                      </div>
+                      <ul class="item-desc__availability">
+                        <li><span class="item-desc__title">На складе:&nbsp;</span><span class="item-desc__desc">300</span></li>
+                        <li><span class="item-desc__title">Свободно:&nbsp;</span><span class="item-desc__desc">100</span></li>
+                        <li><span class="item-desc__title">В резерве:&nbsp;</span><span class="item-desc__desc">50</span></li>
+                      </ul>
+                      <div class="item-desc__features">
+                        <div class="item-desc__features-title">Характеристики</div>
+                        <ul class="item-desc__features-list">
+                          <li><span class="item-desc__title">Плотность:&nbsp;</span><span class="item-desc__desc">180 гр/м2</span></li>
+                          <li><span class="item-desc__title">Материал:&nbsp;</span><span class="item-desc__desc">100% гребенной хлопок</span></li>
+                          <li><span class="item-desc__title">Размер:&nbsp;</span><span class="item-desc__desc">XS/44, S/46, M/48, L/50, XL/52, XXL/54, XXXL/56</span></li>
+                          <li><span class="item-desc__title">Упаковка:&nbsp;</span><span class="item-desc__desc">Индивидуальная</span></li>
+                        </ul>
+                      </div><a class="btn-purple catalog-filter__show-link" href="javascript:void(0);"><span>Перейти к товару</span></a><a class="btn-purple catalog-filter__show-link mobile-cart" href="javascript:void(0);"><span>в корзину</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-catalog__item">
+                  <div class="item__swiper--wrapper">
+                    <div class="swiper-container gallery-top">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-3.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-4.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-5.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-1.png)"></div>
+                      </div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                      <div class="item-swiper-button-next"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-color: #FFFFFF; border-color:#979797;"><span class="border" style="border-color: #979797;"></span></div>
+                        <div class="swiper-slide" style="background-color: #D12C2C;"><span class="border" style="border-color: #D12C2C;"></span></div>
+                        <div class="swiper-slide" style="background-color: #000000;"><span class="border" style="border-color: #000000;"></span></div>
+                        <div class="swiper-slide" style="background-color: #00CDFF;"><span class="border" style="border-color: #00CDFF;"></span></div>
+                        <div class="swiper-slide" style="background-color: #DE7F1A;"><span class="border" style="border-color: #DE7F1A;"></span></div>
+                      </div>
+                      <div class="item-swiper-button-prev"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                    </div>
+                  </div>
+                  <div class="main-catalog__item-desc">
+                    <div class="item-desc">
+                      <div class="item-desc__option">sale</div>
+                      <div class="item-desc__article">Артикул: КК-34123-Х</div>
+                      <div class="item-desc__main-title">Ветровка детская Surf Kids 210, ярко-синяя</div>
+                      <div class="item-desc__content">
+                        <p>Водонепроницаемая, вентиляционные отверстия, безопасный шнур по низу изделия. Капюшон убирается в воротник.</p>
+                      </div>
+                      <div class="item-desc__rate">
+                        <div class="item-desc__rate--wrapper">5 000&nbsp;<span class="currency">a</span></div>
+                        <div class="item-desc__colors"><span class="color red"></span><span class="color black"></span><span class="color white"></span><span class="color orange"></span><span>еще 15</span></div>
+                      </div>
+                      <ul class="item-desc__availability">
+                        <li><span class="item-desc__title">На складе:&nbsp;</span><span class="item-desc__desc">300</span></li>
+                        <li><span class="item-desc__title">Свободно:&nbsp;</span><span class="item-desc__desc">100</span></li>
+                        <li><span class="item-desc__title">В резерве:&nbsp;</span><span class="item-desc__desc">50</span></li>
+                      </ul>
+                      <div class="item-desc__features">
+                        <div class="item-desc__features-title">Характеристики</div>
+                        <ul class="item-desc__features-list">
+                          <li><span class="item-desc__title">Плотность:&nbsp;</span><span class="item-desc__desc">180 гр/м2</span></li>
+                          <li><span class="item-desc__title">Материал:&nbsp;</span><span class="item-desc__desc">100% гребенной хлопок</span></li>
+                          <li><span class="item-desc__title">Размер:&nbsp;</span><span class="item-desc__desc">XS/44, S/46, M/48, L/50, XL/52, XXL/54, XXXL/56</span></li>
+                          <li><span class="item-desc__title">Упаковка:&nbsp;</span><span class="item-desc__desc">Индивидуальная</span></li>
+                        </ul>
+                      </div><a class="btn-purple catalog-filter__show-link" href="javascript:void(0);"><span>Перейти к товару</span></a><a class="btn-purple catalog-filter__show-link mobile-cart" href="javascript:void(0);"><span>в корзину</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-catalog__item">
+                  <div class="item__swiper--wrapper">
+                    <div class="swiper-container gallery-top">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-3.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-4.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-5.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-1.png)"></div>
+                      </div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                      <div class="item-swiper-button-next"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-color: #FFFFFF; border-color:#979797;"><span class="border" style="border-color: #979797;"></span></div>
+                        <div class="swiper-slide" style="background-color: #D12C2C;"><span class="border" style="border-color: #D12C2C;"></span></div>
+                        <div class="swiper-slide" style="background-color: #000000;"><span class="border" style="border-color: #000000;"></span></div>
+                        <div class="swiper-slide" style="background-color: #00CDFF;"><span class="border" style="border-color: #00CDFF;"></span></div>
+                        <div class="swiper-slide" style="background-color: #DE7F1A;"><span class="border" style="border-color: #DE7F1A;"></span></div>
+                      </div>
+                      <div class="item-swiper-button-prev"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                    </div>
+                  </div>
+                  <div class="main-catalog__item-desc">
+                    <div class="item-desc">
+                      <div class="item-desc__option"></div>
+                      <div class="item-desc__article">Артикул: КК-34123-Х</div>
+                      <div class="item-desc__main-title">Ветровка Unit Kivach, оранжевая</div>
+                      <div class="item-desc__content">
+                        <p>Капюшон убирается в воротник. Два наружных кармана на молнии.</p>
+                      </div>
+                      <div class="item-desc__rate">
+                        <div class="item-desc__rate--wrapper">1 000&nbsp;<span class="currency">a</span></div>
+                        <div class="item-desc__colors"><span class="color red"></span><span class="color black"></span><span class="color white"></span><span class="color orange"></span><span>еще 15</span></div>
+                      </div>
+                      <ul class="item-desc__availability">
+                        <li><span class="item-desc__title">На складе:&nbsp;</span><span class="item-desc__desc">300</span></li>
+                        <li><span class="item-desc__title">Свободно:&nbsp;</span><span class="item-desc__desc">100</span></li>
+                        <li><span class="item-desc__title">В резерве:&nbsp;</span><span class="item-desc__desc">50</span></li>
+                      </ul>
+                      <div class="item-desc__features">
+                        <div class="item-desc__features-title">Характеристики</div>
+                        <ul class="item-desc__features-list">
+                          <li><span class="item-desc__title">Плотность:&nbsp;</span><span class="item-desc__desc">180 гр/м2</span></li>
+                          <li><span class="item-desc__title">Материал:&nbsp;</span><span class="item-desc__desc">100% гребенной хлопок</span></li>
+                          <li><span class="item-desc__title">Размер:&nbsp;</span><span class="item-desc__desc">XS/44, S/46, M/48, L/50, XL/52, XXL/54, XXXL/56</span></li>
+                          <li><span class="item-desc__title">Упаковка:&nbsp;</span><span class="item-desc__desc">Индивидуальная</span></li>
+                        </ul>
+                      </div><a class="btn-purple catalog-filter__show-link" href="javascript:void(0);"><span>Перейти к товару</span></a><a class="btn-purple catalog-filter__show-link mobile-cart" href="javascript:void(0);"><span>в корзину</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-catalog__item">
+                  <div class="item__swiper--wrapper">
+                    <div class="swiper-container gallery-top">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-4.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-5.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-6.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-1.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-2.jpg)"></div>
+                      </div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                      <div class="item-swiper-button-next"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-color: #FFFFFF; border-color:#979797;"><span class="border" style="border-color: #979797;"></span></div>
+                        <div class="swiper-slide" style="background-color: #D12C2C;"><span class="border" style="border-color: #D12C2C;"></span></div>
+                        <div class="swiper-slide" style="background-color: #000000;"><span class="border" style="border-color: #000000;"></span></div>
+                        <div class="swiper-slide" style="background-color: #00CDFF;"><span class="border" style="border-color: #00CDFF;"></span></div>
+                        <div class="swiper-slide" style="background-color: #DE7F1A;"><span class="border" style="border-color: #DE7F1A;"></span></div>
+                      </div>
+                      <div class="item-swiper-button-prev"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                    </div>
+                  </div>
+                  <div class="main-catalog__item-desc">
+                    <div class="item-desc">
+                      <div class="item-desc__option">up 20.01.2019</div>
+                      <div class="item-desc__article">Артикул: КК-34123-Х</div>
+                      <div class="item-desc__main-title">Футболка женская Regent Women</div>
+                      <div class="item-desc__content">
+                        <p>Модель без боковых швов, стиль классический, унисекс.</p>
+                      </div>
+                      <div class="item-desc__rate">
+                        <div class="item-desc__rate--wrapper">2 000&nbsp;<span class="currency">a</span></div>
+                        <div class="item-desc__colors"><span class="color red"></span><span class="color black"></span><span class="color white"></span><span class="color orange"></span><span>еще 15</span></div>
+                      </div>
+                      <ul class="item-desc__availability">
+                        <li><span class="item-desc__title">На складе:&nbsp;</span><span class="item-desc__desc">300</span></li>
+                        <li><span class="item-desc__title">Свободно:&nbsp;</span><span class="item-desc__desc">100</span></li>
+                        <li><span class="item-desc__title">В резерве:&nbsp;</span><span class="item-desc__desc">50</span></li>
+                      </ul>
+                      <div class="item-desc__features">
+                        <div class="item-desc__features-title">Характеристики</div>
+                        <ul class="item-desc__features-list">
+                          <li><span class="item-desc__title">Плотность:&nbsp;</span><span class="item-desc__desc">180 гр/м2</span></li>
+                          <li><span class="item-desc__title">Материал:&nbsp;</span><span class="item-desc__desc">100% гребенной хлопок</span></li>
+                          <li><span class="item-desc__title">Размер:&nbsp;</span><span class="item-desc__desc">XS/44, S/46, M/48, L/50, XL/52, XXL/54, XXXL/56</span></li>
+                          <li><span class="item-desc__title">Упаковка:&nbsp;</span><span class="item-desc__desc">Индивидуальная</span></li>
+                        </ul>
+                      </div><a class="btn-purple catalog-filter__show-link" href="javascript:void(0);"><span>Перейти к товару</span></a><a class="btn-purple catalog-filter__show-link mobile-cart" href="javascript:void(0);"><span>в корзину</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-catalog__item">
+                  <div class="item__swiper--wrapper">
+                    <div class="swiper-container gallery-top">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-5.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-6.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-4.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-1.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-2.jpg)"></div>
+                      </div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                      <div class="item-swiper-button-next"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-color: #FFFFFF; border-color:#979797;"><span class="border" style="border-color: #979797;"></span></div>
+                        <div class="swiper-slide" style="background-color: #D12C2C;"><span class="border" style="border-color: #D12C2C;"></span></div>
+                        <div class="swiper-slide" style="background-color: #000000;"><span class="border" style="border-color: #000000;"></span></div>
+                        <div class="swiper-slide" style="background-color: #00CDFF;"><span class="border" style="border-color: #00CDFF;"></span></div>
+                        <div class="swiper-slide" style="background-color: #DE7F1A;"><span class="border" style="border-color: #DE7F1A;"></span></div>
+                      </div>
+                      <div class="item-swiper-button-prev"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                    </div>
+                  </div>
+                  <div class="main-catalog__item-desc">
+                    <div class="item-desc">
+                      <div class="item-desc__option">sale</div>
+                      <div class="item-desc__article">Артикул: КК-34123-Х</div>
+                      <div class="item-desc__main-title">Футболка T-bolka 140, синяя (сапфировая)</div>
+                      <div class="item-desc__content">
+                        <p>Описание товара, включает в себя несколько строк товара, включает в себя несколько строк</p>
+                      </div>
+                      <div class="item-desc__rate">
+                        <div class="item-desc__rate--wrapper">1 200&nbsp;<span class="currency">a</span></div>
+                        <div class="item-desc__colors"><span class="color red"></span><span class="color black"></span><span class="color white"></span><span class="color orange"></span><span>еще 15</span></div>
+                      </div>
+                      <ul class="item-desc__availability">
+                        <li><span class="item-desc__title">На складе:&nbsp;</span><span class="item-desc__desc">300</span></li>
+                        <li><span class="item-desc__title">Свободно:&nbsp;</span><span class="item-desc__desc">100</span></li>
+                        <li><span class="item-desc__title">В резерве:&nbsp;</span><span class="item-desc__desc">50</span></li>
+                      </ul>
+                      <div class="item-desc__features">
+                        <div class="item-desc__features-title">Характеристики</div>
+                        <ul class="item-desc__features-list">
+                          <li><span class="item-desc__title">Плотность:&nbsp;</span><span class="item-desc__desc">180 гр/м2</span></li>
+                          <li><span class="item-desc__title">Материал:&nbsp;</span><span class="item-desc__desc">100% гребенной хлопок</span></li>
+                          <li><span class="item-desc__title">Размер:&nbsp;</span><span class="item-desc__desc">XS/44, S/46, M/48, L/50, XL/52, XXL/54, XXXL/56</span></li>
+                          <li><span class="item-desc__title">Упаковка:&nbsp;</span><span class="item-desc__desc">Индивидуальная</span></li>
+                        </ul>
+                      </div><a class="btn-purple catalog-filter__show-link" href="javascript:void(0);"><span>Перейти к товару</span></a><a class="btn-purple catalog-filter__show-link mobile-cart" href="javascript:void(0);"><span>в корзину</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-catalog__item">
+                  <div class="item__swiper--wrapper">
+                    <div class="swiper-container gallery-top">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-6.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-5.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-4.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-1.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(/img/img_catalog-2.jpg)"></div>
+                      </div>
+                    </div>
+                    <div class="swiper-container gallery-thumbs">
+                      <div class="item-swiper-button-next"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-color: #FFFFFF; border-color:#979797;"><span class="border" style="border-color: #979797;"></span></div>
+                        <div class="swiper-slide" style="background-color: #D12C2C;"><span class="border" style="border-color: #D12C2C;"></span></div>
+                        <div class="swiper-slide" style="background-color: #000000;"><span class="border" style="border-color: #000000;"></span></div>
+                        <div class="swiper-slide" style="background-color: #00CDFF;"><span class="border" style="border-color: #00CDFF;"></span></div>
+                        <div class="swiper-slide" style="background-color: #DE7F1A;"><span class="border" style="border-color: #DE7F1A;"></span></div>
+                      </div>
+                      <div class="item-swiper-button-prev"><img src="img/sprites/sprite.svg#ico_arrow-up-purple"></div>
+                    </div>
+                  </div>
+                  <div class="main-catalog__item-desc">
+                    <div class="item-desc">
+                      <div class="item-desc__option">up 20.01.2019</div>
+                      <div class="item-desc__article">Артикул: КК-34123-Х</div>
+                      <div class="item-desc__main-title">Футболка женская Regent Women</div>
+                      <div class="item-desc__content">
+                        <p>Модель без боковых швов, стиль классический, унисекс.</p>
+                      </div>
+                      <div class="item-desc__rate">
+                        <div class="item-desc__rate--wrapper">1 000&nbsp;<span class="currency">a</span></div>
+                        <div class="item-desc__colors"><span class="color red"></span><span class="color black"></span><span class="color white"></span><span class="color orange"></span><span>еще 15</span></div>
+                      </div>
+                      <ul class="item-desc__availability">
+                        <li><span class="item-desc__title">На складе:&nbsp;</span><span class="item-desc__desc">300</span></li>
+                        <li><span class="item-desc__title">Свободно:&nbsp;</span><span class="item-desc__desc">100</span></li>
+                        <li><span class="item-desc__title">В резерве:&nbsp;</span><span class="item-desc__desc">50</span></li>
+                      </ul>
+                      <div class="item-desc__features">
+                        <div class="item-desc__features-title">Характеристики</div>
+                        <ul class="item-desc__features-list">
+                          <li><span class="item-desc__title">Плотность:&nbsp;</span><span class="item-desc__desc">180 гр/м2</span></li>
+                          <li><span class="item-desc__title">Материал:&nbsp;</span><span class="item-desc__desc">100% гребенной хлопок</span></li>
+                          <li><span class="item-desc__title">Размер:&nbsp;</span><span class="item-desc__desc">XS/44, S/46, M/48, L/50, XL/52, XXL/54, XXXL/56</span></li>
+                          <li><span class="item-desc__title">Упаковка:&nbsp;</span><span class="item-desc__desc">Индивидуальная</span></li>
+                        </ul>
+                      </div><a class="btn-purple catalog-filter__show-link" href="javascript:void(0);"><span>Перейти к товару</span></a><a class="btn-purple catalog-filter__show-link mobile-cart" href="javascript:void(0);"><span>в корзину</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-catalog__pagination--wrapper">
+                <div id="pagination"></div>
+                <div class="main-catalog__show-more"><a class="main-catalog__show-more-link" href="javascript:void(0);"><span>показать еще &nbsp;</span><span class="amount">10</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/main.js"></script>
+    <script src="../js/vendor.js"></script>
+  </body>
+</html>
