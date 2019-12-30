@@ -3,6 +3,10 @@
   background-color: #fff;
   transition: $transition;
 
+  @media(max-width: 425px)  {
+    padding: 10px 25px 20px 0;
+  }
+
   .catalog-filter__show-link {
     @media(max-width: 768px)  {
       display:none;
@@ -31,6 +35,10 @@
       font-size: 8px;
       text-transform: uppercase;
       margin-bottom: 15px;
+
+      @media(max-width: 425px)  {
+        margin-bottom: 10px;
+      }
     }
 
     &__option {
@@ -45,6 +53,11 @@
       letter-spacing: 1.5px;
       text-transform: uppercase;
       transition: $transition;
+
+      @media(max-width: 425px)  {
+        bottom: 25px;
+        top: auto;
+      }
     }
 
     &__main-title {
@@ -59,6 +72,16 @@
       @media(max-width: 768px)  {
         color: #654A9D;
       }
+
+      @media(max-width: 425px) {
+        font-size: 10px;
+        line-height: 16px;
+        /* or 160% */
+        min-height: 64px;
+        margin-bottom: 10px;
+        letter-spacing: 0.833333px;
+        text-transform: uppercase;
+      }
     }
 
     &__content {
@@ -67,9 +90,14 @@
       line-height: 18px;
       margin-bottom: 10px;
       min-height: 56px;
+
       @media(max-width: 768px)  {
         margin-bottom: 20px;
         min-height: 30px;
+      }
+
+      @media(max-width: 425px)  {
+        display: none;
       }
 
       p {
@@ -85,8 +113,16 @@
       color: #654A9D;
       margin-bottom: 10px;
 
+      @media(max-width: 425px)  {
+        font-size: 14px;
+      }
+
       .item-desc__colors {
         display: none;
+
+        @media(max-width: 425px)  {
+          margin-top: 7px;
+        }
       }
 
       @media(max-width: 768px)  {
@@ -130,6 +166,10 @@
         }
       }
 
+      @media(max-width: 425px)  {
+        display: block;
+      }
+
       .currency {
         font-family: $font_rub;
       }
@@ -149,12 +189,22 @@
     &__title {
       font-size: 10px;
       line-height: 16px;
+
+      @media(max-width: 425px)  {
+        font-size: 8px;
+        line-height: 8px;
+      }
     }
 
     &__desc {
       font-family: $font_medium;
       font-size: 10px;
       line-height: 16px;
+
+      @media(max-width: 425px)  {
+        font-size: 8px;
+        line-height: 8px;
+      }
     }
 
     &__features {
@@ -185,6 +235,33 @@
         letter-spacing: 1px;
         text-transform: uppercase;
         margin-bottom: 10px;
+      }
+    }
+  }
+
+  @media(max-width: 425px)  {
+    .catalog-filter__show-link {
+
+      &.mobile-cart {
+        display: flex;
+        position: absolute;
+        bottom: -45px;
+        left: 0;
+        width: calc(100% + 25px);
+
+      }
+
+      span {
+        padding: 8px 0px 6px 0px;
+      }
+      &::before {
+        width: 24px;
+        height: 24px;
+      }
+
+      &::after {
+        width: 24px;
+        height: 24px;
       }
     }
   }

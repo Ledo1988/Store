@@ -7,6 +7,10 @@
     padding: 0 20px;
   }
 
+  @media(max-width: 425px) {
+    padding: 0 7px;
+  }
+
   .items-sorting {
     display: flex;
     justify-content: space-between;
@@ -16,8 +20,17 @@
       display: flex;
       align-items: center;
 
+      @media(max-width: 425px) {
+        flex-wrap: wrap;
+      }
+
       > .items-sorting__title {
         border-bottom: 1px solid transparent;
+
+        @media(max-width: 425px) {
+          width: 100%;
+          margin-bottom: 10px;
+        }
       }
 
       .items-sorting__rate {
@@ -80,6 +93,8 @@
           border-bottom: 1px solid transparent;
           transition: $transition;
           margin-right: 0;
+
+
         }
 
         &.active {
@@ -98,6 +113,8 @@
       letter-spacing: 0.5px;
       text-transform: uppercase;
       margin-right: 7px;
+
+
     }
 
     &__view {
@@ -163,5 +180,10 @@
     left: 0;
     height: 44px;
     z-index: 99999;
+
+    @media(max-width: 425px) {
+      width: 100%;
+      margin: 0;
+    }
   }
 }

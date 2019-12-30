@@ -1,3 +1,15 @@
+.main-catalog__pagination--wrapper {
+  padding: 0 10px;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 425px) {
+    padding: 0 7px;
+  }
+}
+
 .main-catalog__pagination {
   display: flex;
   justify-content: center;
@@ -8,6 +20,8 @@
   letter-spacing: 0.8px;
   font-family: $font_museo500;
   color: #575757;
+
+
 
   a {
     border-bottom: 3px solid transparent;
@@ -54,9 +68,13 @@
 
   .page-item {
     margin-right: 15px;
+    @media(max-width:425px) {
+      margin-right: 5px;
+    }
 
     &.active {
       font-family: $font_museo900;
+
 
       a {
         border-bottom: 3px solid $color_purple;

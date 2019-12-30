@@ -3,6 +3,10 @@
   position: relative;
   transition: $transition;
 
+ @media(max-width: 425px) {
+   height: 115px;
+ }
+
 
   .swiper-container {
     width: 100%;
@@ -14,6 +18,11 @@
   .swiper-slide {
     background-size: cover;
     background-position: center;
+
+    @media(max-width: 425px) {
+      width: 100% !important;
+      height: 100% !important;
+    }
   }
 
   .gallery-top {

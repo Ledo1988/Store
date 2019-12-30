@@ -1,5 +1,9 @@
 .main-catalog__items-types {
 
+  @media(max-width: 425px) {
+    display: none;
+  }
+
   .items-types {
     display: flex;
     align-items: center;
