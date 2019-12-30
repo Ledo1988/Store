@@ -10,8 +10,15 @@
 		.item-desc__main-title #{catalogItemTitle}
 		.item-desc__content
 			p #{catalogItemDesc}
-		.item-desc__rate #{catalogItemRate}&nbsp;
-			span.currency a
+		.item-desc__rate
+			.item-desc__rate--wrapper #{catalogItemRate}&nbsp;
+				span.currency a
+			.item-desc__colors
+				span.color.red
+				span.color.black
+				span.color.white
+				span.color.orange
+				span еще 15
 		ul.item-desc__availability
 			li
 				span.item-desc__title На складе:&nbsp;
@@ -39,5 +46,7 @@
 					span.item-desc__desc Индивидуальная
 		a.btn-purple.catalog-filter__show-link(href='javascript:void(0);')
 			span Перейти к товару
+		a.btn-purple.catalog-filter__show-link.mobile-cart(href='javascript:void(0);')
+			span в корзину
 
 

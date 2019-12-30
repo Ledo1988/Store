@@ -3,6 +3,27 @@
   background-color: #fff;
   transition: $transition;
 
+  .catalog-filter__show-link {
+    @media(max-width: 768px)  {
+      display:none;
+    }
+
+    &.mobile-cart {
+      display: none;
+
+      @media(max-width: 768px)  {
+        display: flex;
+
+        &:after {
+          background-image: url('/img/sprites/sprite.svg#ico_cart');
+          background-size: 17px;
+        }
+
+      }
+    }
+
+  }
+
   .item-desc {
     position: relative;
 
@@ -34,6 +55,10 @@
       margin-bottom: 12px;
       line-height: 18px;
       min-height: 36px;
+
+      @media(max-width: 768px)  {
+        color: #654A9D;
+      }
     }
 
     &__content {
@@ -42,6 +67,15 @@
       line-height: 18px;
       margin-bottom: 10px;
       min-height: 56px;
+      @media(max-width: 768px)  {
+        margin-bottom: 20px;
+        min-height: 30px;
+      }
+
+      p {
+        font-family: $font_light;
+        font-size: 12px;
+      }
     }
 
     &__rate {
@@ -51,6 +85,51 @@
       color: #654A9D;
       margin-bottom: 10px;
 
+      .item-desc__colors {
+        display: none;
+      }
+
+      @media(max-width: 768px)  {
+        display: flex;
+        justify-content: space-between;
+        color: $color_black;
+        align-items: center;
+
+        .item-desc__colors {
+          display: flex;
+          font-size: 7px;
+          font-family: $font_medium;
+
+          .color {
+            width: 8px;
+            height: 8px;
+            margin-right: 8px;
+            border-radius: 100%;
+
+            &:last-of-type {
+              margin-right: 16px;
+            }
+
+            &.red {
+              background-color: #D12C2C;
+            }
+
+            &.black {
+              background-color: #000000;
+            }
+
+            &.white {
+              background-color: #ffffff;
+              border: 1px solid #979797;
+            }
+
+            &.orange {
+              background: #DE7F1A;
+            }
+          }
+        }
+      }
+
       .currency {
         font-family: $font_rub;
       }
@@ -58,6 +137,9 @@
 
     &__availability {
       margin-bottom: 20px;
+      @media(max-width: 768px)  {
+        margin-bottom: 30px;
+      }
 
       .item-desc__title {
         min-width: 55px;
@@ -77,6 +159,10 @@
 
     &__features {
       margin-bottom: 20px;
+
+      @media(max-width: 768px)  {
+        display: none;
+      }
 
       li {
         display: flex;

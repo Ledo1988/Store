@@ -1,12 +1,14 @@
 .catalog-filter__item-choice {
   padding: 20px 30px;
 
+  @media (max-width: 1024px)  {
+    padding: 20px 25px 20px 20px;
+}
+
   .checkbox-wrapper {
     label {
       width: 100%;
     }
-
-
 
     span.color {
       width: 100%;

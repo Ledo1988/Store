@@ -32,6 +32,10 @@
     top: 10px;
     left: 10px;
     transition: $transition;
+
+    @media(max-width:768px) {
+      display: none;
+    }
   }
 
   .gallery-thumbs .swiper-slide {

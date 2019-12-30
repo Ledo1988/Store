@@ -1,11 +1,21 @@
 .main-catalog--wrapper {
   @include container-full();
   margin-bottom: 55px;
+
+  @media(max-width: 768px) {
+    padding: 0 20px;
+  }
 }
 
 .main-catalog {
   @include container();
   padding-top: 30px;
+
+  @media(max-width: 768px) {
+    padding: 0 20px;
+    padding-top: 30px;
+  }
+
 
   .sub-menu {
     @include catalog-item;
@@ -15,5 +25,9 @@
   &__content {
     @include catalog-full;
     display: flex;
+
+    @media(max-width: 768px) {
+      margin: 0 -20px;
+    }
   }
 }

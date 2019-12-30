@@ -3,16 +3,32 @@
   display: flex;
   flex-wrap: wrap;
 
+  @media(max-width: 768px) {
+    display: block;
+    margin: 0 -20px;
+  }
+
   .breadcrumbs {
     width: 100%;
   }
 
   &-title {
     @include catalog-item;
+
+    @media(max-width: 768px) {
+      width: 100%;
+      padding: 0 20px;
+    }
   }
 
   &-section {
     @include catalog-main;
+
+    @media(max-width: 768px) {
+      width: 100%;
+      margin-bottom: 16px;
+      padding: 0 20px;
+    }
   }
 
   .main-catalog__header-choice {

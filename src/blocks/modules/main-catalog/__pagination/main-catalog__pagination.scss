@@ -72,8 +72,8 @@
   }
 }
 
-.main-catalog__show-more {
-  a {
+.main-catalog__show-more-link {
+
     display: block;
     background: #F5F1FD;
     border-radius: 2px;
@@ -84,5 +84,5 @@
     text-transform: uppercase;
     font-family: $font_bold;
     padding: 13px;
-  }
+
 }

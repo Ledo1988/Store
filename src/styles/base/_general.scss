@@ -362,4 +362,14 @@ main.main-detailed {
     }
 }
 
+body, html {
+
+    &.overflow-hidden {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        height: 100%;
+        width: 100%;
+    }
+}
+
 

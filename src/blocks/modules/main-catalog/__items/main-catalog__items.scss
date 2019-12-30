@@ -1,4 +1,8 @@
 .main-catalog__items {
   width: 75%;
   flex-shrink: 0;
+
+  @media(max-width: 768px) {
+    width: 100%;
+  }
 }
